@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTENCE DETAILING | Professional Car Detailing Services</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+        }
+        .navbar {
+            background-color: white;
+            padding: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #fff;
+        }
+        .navbar h1 {
+            font-size: 32px;
+            font-weight: bold;
+            color: black;
+        }
+        .navbar a {
+            margin: 0 8px;
+            color: black;
+            transition: color 0.3s;
+        }
+        .navbar a:hover {
+            color: black;
+        }
+        .hero {
+            background: url('https://res.cloudinary.com/dfqreujbo/image/upload/v1738712765/VK_17_w5jstn.jpg') center/cover no-repeat;
+            background-color: #fff;
+            padding: 80px 0;
+            text-align: left;
+        }
+        
+        .hero h2 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 16px;
+            margin-left: 50px;
+        }
+        .hero p {
+            margin-bottom: 24px;
+            color: black;
+            margin-left: 50px;
+        }
+        .hero a {
+            background-color: white;
+            color: black;
+            padding: 8px 24px;
+            border-radius: 9999px;
+            font-weight: 600;
+            margin-left: 50px;
+        }
+        .services {
+            padding: 64px 16px;
+            background-color: black;
+        }
+        .services h3 {
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .service-item {
+            background-color: white;
+            padding: 24px;
+            border-radius: 16px;
+            border: 1px solid #4B5563;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .service-item h4 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .service-item p {
+            color: #9CA3AF;
+        }
+        .gallery {
+            background-color: black;
+            padding: 64px 16px;
+        }
+        .gallery h3 {
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .gallery-item {
+            background-color: #2D3748;
+            height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #4B5563;
+        }
+        .testimonials {
+            padding: 64px 16px;
+            background-color: #1F2937;
+        }
+        .testimonials h3 {
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .testimonial-item {
+            background-color: #2D3748;
+            padding: 24px;
+            border-radius: 16px;
+            margin-bottom: 24px;
+            border: 1px solid #4B5563;
+        }
+        .testimonial-item p {
+            margin-bottom: 8px;
+        }
+        .testimonial-item span {
+            color: #6B7280;
+        }
+        .contact {
+            padding: 64px 16px;
+            background-color: black;
+        }
+        .contact h3 {
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .contact-form {
+            max-width: 640px;
+            margin: 0 auto;
+            background-color: #2D3748;
+            padding: 32px;
+            border-radius: 16px;
+            border: 1px solid #4B5563;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            color: #9CA3AF;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 8px;
+            background-color: #1F2937;
+            border: 1px solid #4B5563;
+            border-radius: 6px;
+            color: white;
+        }
+        .contact-form button {
+            background-color: white;
+            color: black;
+            padding: 8px 24px;
+            border-radius: 9999px;
+            font-weight: 600;
+            margin-top: 16px;
+        }
+        .footer {
+            background-color: black;
+            color: #9CA3AF;
+            text-align: center;
+            padding: 16px;
+            border-top: 1px solid #4B5563;
+        }
+    </style>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1>INTENCE DETAILING</h1>
+        <div>
+            <a href="#services">Services</a>
+            <a href="#about">About Us</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h2>Professional Car Detailing Services</h2>
+        <p>Make your car shine like new with our expert detailing packages.</p>
+        <a href="#contact">Book Now</a>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h3>Our Services</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="service-item">
+                <h4>Exterior Detailing</h4>
+                <p>Deep cleaning, waxing, and polishing to make your car's exterior shine.</p>
+            </div>
+            <div class="service-item">
+                <h4>Interior Detailing</h4>
+                <p>Thorough vacuuming, upholstery cleaning, and sanitizing.</p>
+            </div>
+            <div class="service-item">
+                <h4>Full Detailing Package</h4>
+                <p>Get the best of both worlds with our complete detailing service.</p>
+            </div>
+            <div class="service-item">
+                <h4>Paint Correction</h4>
+                <p>Remove swirl marks and minor scratches to restore your car's paint finish.</p>
+            </div>
+            <div class="service-item">
+                <h4>Ceramic Coating</h4>
+                <p>Protect your car with a durable, long-lasting ceramic layer.</p>
+            </div>
+            <div class="service-item">
+                <h4>Engine Bay Detailing</h4>
+                <p>Keep your engine bay clean and looking brand new.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <h3>Gallery</h3>
+        <div class="grid md:grid-cols-4 gap-4">
+            <div class="gallery-item">Image 1</div>
+            <div class="gallery-item">Image 2</div>
+            <div class="gallery-item">Image 3</div>
+            <div class="gallery-item">Image 4</div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <h3>Testimonials</h3>
+        <div class="testimonial-item">
+            <p>"INTENCE DETAILING did an amazing job on my car. It looks brand new!"</p>
+            <span>- Alex P.</span>
+        </div>
+        <div class="testimonial-item">
+            <p>"Their attention to detail is unmatched. Highly recommend!"</p>
+            <span>- Jessica M.</span>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h3>Contact Us</h3>
+        <form class="contact-form">
+            <div class="mb-4">
+                <label>Name</label>
+                <input type="text" placeholder="Your Name">
+            </div>
+            <div class="mb-4">
+                <label>Email</label>
+                <input type="email" placeholder="Your Email">
+            </div>
+            <div class="mb-4">
+                <label>Message</label>
+                <textarea rows="5" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 INTENCE DETAILING. All rights reserved.</p>
+    </footer>
+</body>
+</html>
