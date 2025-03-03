@@ -14,7 +14,8 @@
         }
         .navbar {
             background-color: #151515;
-            padding: 16px;
+            padding: 1px;
+            padding-right: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -24,6 +25,7 @@
             font-size: 32px;
             font-weight: bold;
             color: white;
+            margin-left: -580px;
         }
         .navbar a {
             margin: 0 8px;
@@ -34,18 +36,20 @@
             color: white;
         }
         .hero {
-            background-color:  rgb(243 244 246);
-            padding: 80px 0;
+            background-image: url("https://www.lenosgarage.com/cdn/shop/articles/Premium-Car-Detailing-Microfiber-Towels-Featured.jpg?v=1693583709&width=1920");
+            padding: 250px 0;
             text-align: left;
+            margin-top: -1px;
         }
         
         .hero h2 {
-            font-size: 36px;
+            font-size: 56px;
             font-weight: bold;
             margin-bottom: 16px;
             margin-left: 50px;
             color: white;
         }
+
         .hero p {
             margin-bottom: 24px;
             color: white;
@@ -59,6 +63,7 @@
             font-weight: 600;
             margin-left: 50px;
         }
+        
         .services {
             padding: 64px 16px;
             background-color: black;
@@ -127,12 +132,16 @@
             border-radius: 16px;
             margin-bottom: 24px;
             border: 1px solid #4B5563;
+            margin-left: 350px;
+            justify-items: center;
+            width: 800px;
         }
         .testimonial-item p {
             margin-bottom: 8px;
         }
         .testimonial-item span {
             color: white;
+            width: 200px;
         }
         .contact {
             padding: 64px 16px;
@@ -310,14 +319,18 @@
             max-height: 600px;
             border-radius: 10px; /* Adds rounded corners for a softer look */
         }
+        .navbar img{
+            width: 130px;
+        }
     </style>
 
     <!-- Navbar -->
     <nav class="navbar">
+        <img src="https://res.cloudinary.com/dfqreujbo/image/upload/v1738738526/INTEC_MEDIA1_famvag.png" alt="INTENCE MEDIA Logo" >
         <h1>INTENCE DETAILING</h1>
         <div>
             <a href="#services">Services</a>
-            <a href="#about">About Us</a>
+            <a href="#info-section">About Us</a>
             <a href="#gallery">Gallery</a>
             <a href="#testimonials">Testimonials</a>
             <a href="#contact">Contact</a>
@@ -353,7 +366,7 @@
 
 
     <section class="p-10">
-        <h2 class="heading">Our Services</h2>
+        <h2 id="services" class="heading">Our Services</h2>
         <div class="service-grid">
             <div class="service-card basic-detail">
                 <h3>Basic Interior Detail</h3>
