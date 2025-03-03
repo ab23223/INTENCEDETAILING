@@ -9,11 +9,11 @@
 <body>
     <style>
         body {
-            background-color: white;
-            color: black;
+            background-color: #151515;
+            color: white;
         }
         .navbar {
-            background-color: white;
+            background-color: #151515;
             padding: 16px;
             display: flex;
             justify-content: space-between;
@@ -23,19 +23,18 @@
         .navbar h1 {
             font-size: 32px;
             font-weight: bold;
-            color: black;
+            color: white;
         }
         .navbar a {
             margin: 0 8px;
-            color: black;
+            color: white;
             transition: color 0.3s;
         }
         .navbar a:hover {
-            color: black;
+            color: white;
         }
         .hero {
-            background: url('https://res.cloudinary.com/dfqreujbo/image/upload/v1738712765/VK_17_w5jstn.jpg') center/cover no-repeat;
-            background-color: #fff;
+            background-color:  rgb(243 244 246);
             padding: 80px 0;
             text-align: left;
         }
@@ -86,15 +85,24 @@
             color: #9CA3AF;
         }
         .gallery {
-            background-color: white;
+            background-color: rgb(243 244 246);
             padding: 64px 16px;
         }
         .gallery h3 {
-            font-size: 30px;
+            font-size: 40px;
             font-weight: bold;
             text-align: center;
             margin-bottom: 32px;
+            color: black;
         }
+
+        .gallery p {
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 32px;
+            color: black;
+        }
+
         .gallery-item {
             background-color: #2D3748;
             height: 160px;
@@ -105,7 +113,7 @@
         }
         .testimonials {
             padding: 64px 16px;
-            background-color: #1F2937;
+            background-color: black;
         }
         .testimonials h3 {
             font-size: 30px;
@@ -114,7 +122,7 @@
             margin-bottom: 32px;
         }
         .testimonial-item {
-            background-color: #2D3748;
+            background-color: #1b1b1b;
             padding: 24px;
             border-radius: 16px;
             margin-bottom: 24px;
@@ -124,44 +132,43 @@
             margin-bottom: 8px;
         }
         .testimonial-item span {
-            color: #6B7280;
+            color: white;
         }
         .contact {
             padding: 64px 16px;
-            background-color: black;
+            background-color: white;
         }
         .contact h3 {
-            font-size: 30px;
+            font-size: 40px;
             font-weight: bold;
             text-align: center;
             margin-bottom: 32px;
+            color: black;
         }
         .contact-form {
             max-width: 640px;
             margin: 0 auto;
-            background-color: #2D3748;
+            background-color: transparent;
+            margin-left: 700px;
             padding: 32px;
-            border-radius: 16px;
-            border: 1px solid #4B5563;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .contact-form label {
             display: block;
             margin-bottom: 8px;
-            color: #9CA3AF;
+            color: black;
         }
         .contact-form input,
         .contact-form textarea {
             width: 100%;
             padding: 8px;
-            background-color: #1F2937;
+            background-color: transparent;
             border: 1px solid #4B5563;
             border-radius: 6px;
             color: white;
         }
         .contact-form button {
-            background-color: white;
-            color: black;
+            background-color: black;
+            color: white;
             padding: 8px 24px;
             border-radius: 9999px;
             font-weight: 600;
@@ -173,6 +180,135 @@
             text-align: center;
             padding: 16px;
             border-top: 1px solid #4B5563;
+        }
+
+        .p-10 { 
+            padding: 2.5rem; 
+        }
+
+        .heading { 
+            font-size: 1.875rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media(min-width: 768px) {
+            .service-grid { 
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .service-card {
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+        }
+
+        .basic-detail, .basic-wash, .premium-wash {
+            background-color: #1b1b1b;
+            color: white;
+        }
+
+        .premium-detail {
+            background-color: #1b1b1b; 
+            color: white;
+            border: 2px solid #FFD700;
+        }
+
+        .pricing {
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+
+        .pricing1 {
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            color: #6b7280;
+            padding-top: 100px;
+        }
+
+        .pricing2 {
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            color: #6b7280;
+            padding-top: 80px;
+        }
+        
+        .popular-choice {
+            font-size: 0.875rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .enquire-btn {
+            margin-top: 1rem;
+            background-color: #FFD700;
+            color: #000; padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+        }
+
+        .premium-btn {
+            margin-top: 1rem;
+            background-color: #FFD700;
+            color: #000; padding: 0.5rem 1rem;
+            border-radius: 0.5rem; 
+        }
+
+        .service-card h3{
+            font-size: 20px;
+            font-weight: bold;
+            padding-bottom: 20px;
+        }
+
+        #info-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+            background-color: #fff; /* White background to keep it clean */
+        }
+
+        .info-text {
+            flex: 1;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .info-text h2 {
+            font-size: 45px;
+            margin-bottom: 40px;
+            margin-top: -270px;
+            margin-left: 50px;
+            margin-right: 300;
+            color: black;
+            font-weight: 600;
+        }
+
+        .info-text p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            margin-left: 50px;
+            margin-right: -100px;
+        }
+        
+
+        .info-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .info-image img {
+            max-width: 70%;
+            max-height: 600px;
+            border-radius: 10px; /* Adds rounded corners for a softer look */
         }
     </style>
 
@@ -195,52 +331,122 @@
         <a href="#contact">Book Now</a>
     </header>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <h3>Our Services</h3>
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="service-item">
-                <h4>Basic Interior Detail</h4>
-                <p> • Full vacuum
-                    • Mats cleaned
-                    • Interior steam, wipe down & blowout
-                    • Door jams cleaned</p>
+    <section id="info-section">
+        <div class="info-text">
+            <h2>Premium Quality Car Detailing</h2>
+            <p>Welcome to INTENCE Detailing, your trusted premium quality car detailing specialist in Auckland. We provide comprehensive detailing services throughout Papakura, Karaka, Pukekohe, and surrounding areas, bringing showroom quality results directly to you, sure to leave your jaw dropping.</p>
+        </div>
+
+        <div class="info-text1">
+            <ul>
+                <li>Auckland's Highest Quality Car Detailing Service</li>
+                <li>Professional Service</li>
+                <li>Premium Products & Equipment</li>
+                <li>Satisfaction Guaranteed</li>
+            </ul> 
+        </div>
+        <div class="info-image">
+            <img src="https://res.cloudinary.com/dfqreujbo/image/upload/v1738712765/GM_SHOW_3_y2ykrq.jpg" alt="Photography in action">
+        </div>
+    </section>
+
+
+
+    <section class="p-10">
+        <h2 class="heading">Our Services</h2>
+        <div class="service-grid">
+            <div class="service-card basic-detail">
+                <h3>Basic Interior Detail</h3>
+                <ul>
+                    <li>• Full vacuum</li>
+                    <li>• Mats cleaned</li>
+                    <li>• Interior steam, wipe down & blowout</li>
+                    <li>• Door jams cleaned</li>
+                </ul>
+                <p class="pricing1">
+                    • 3 row vehicle $149.99<br>
+                    • Sedan, small car, midsize, SUV, Ute $114.99
+                </p>
+                <button class="enquire-btn">Enquire Now</button>
             </div>
-            <div class="service-item">
-                <h4>Premium Interior Detail</h4>
-                <p> • Full vacuum
-                    • Complete interior deep clean (steamed, wipe down & blow out)
-                    • Shampoo & Extract Seats/Carpets
-                    • Steam Clean Seats/Carpets
-                    • Full Clean On Mats & Leather Mats
-                    • Leather Cleaned & Conditioned
-                    • Windows cleaned</p>
+    
+            <div class="service-card premium-detail">
+                <h3>Premium Interior Detail</h3>
+                <p class="popular-choice">Most Popular Choice! Perfect for Deep Restoration</p>
+                <ul>
+                    <li>• Full vacuum</li>
+                    <li>• Complete interior deep clean (steamed, wipe down & blow out)</li>
+                    <li>• Shampoo & Extract Seats/Carpets</li>
+                    <li>• Steam Clean Seats/Carpets</li>
+                    <li>• Full Clean On Mats & Leather Mats</li>
+                    <li>• Leather Cleaned & Conditioned</li>
+                    <li>• Windows cleaned</li>
+                </ul>
+                <p class="pricing">
+                    • 3 row vehicle $204.99<br>
+                    • Sedan, small car, midsize, SUV, Ute $179.99
+                </p>
+                <button class="premium-btn">Enquire Now</button>
             </div>
-            <div class="service-item">
-                <h4>Full Detailing Package</h4>
-                <p>Get the best of both worlds with our complete detailing service.</p>
+    
+            <div class="service-card basic-wash">
+                <h3>Basic Interior Detail + Basic Wash</h3>
+                <ul>
+                    <li>• Everything in Basic Interior Detail Plus:</li>
+                    <li>• Foam cleanser + Hand wash</li>
+                    <li>• Rim faces and tires cleaned</li>
+                    <li>• Microfibre towel dry</li>
+                </ul>
+                <p class="pricing2">
+                    • 3 row vehicle $179.99<br>
+                    • Sedan, small car, midsize, SUV, Ute $154.99
+                </p>
+                <button class="enquire-btn">Enquire Now</button>
             </div>
-            <div class="service-item">
-                <h4>Paint Correction</h4>
-                <p>Remove swirl marks and minor scratches to restore your car's paint finish.</p>
+    
+            <div class="service-card premium-wash">
+                <h3>Premium Interior Detail + Premium Wash</h3>
+                <ul>
+                    <li>• Everything in Premium Interior Detail plus:</li>
+                    <li>• Foam cleanser + Hand wash</li>
+                    <li>• Rim faces & tires cleaned</li>
+                    <li>• Tire dressing applied</li>
+                    <li>• Wheel barrel deep clean</li>
+                    <li>• Ceramic coating applied</li>
+                    <li>• BONUS: FREE vacuum and wipe down one month later</li>
+                </ul>
+                <p class="pricing">
+                    • 3 row vehicle $259.99<br>
+                    • Sedan, small car, midsize, SUV, Ute $234.99
+                </p>
+                <button class="enquire-btn">Enquire Now</button>
             </div>
         </div>
     </section>
 
     <!-- Gallery Section -->
     <section id="gallery" class="gallery">
-        <h3>Gallery</h3>
+        <h3>Car Transformations</h3>
+        <p>Feel free to checkout some of the cars we have transformed from dirty and dull to showroom level shine!</p>
         <div class="grid md:grid-cols-4 gap-4">
             <div class="gallery-item">Image 1</div>
             <div class="gallery-item">Image 2</div>
             <div class="gallery-item">Image 3</div>
             <div class="gallery-item">Image 4</div>
         </div>
+        
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="transformations.html">
+                <button style="padding: 10px 20px; border: 2px solid black; color: black; text-decoration: none; display: inline-block; border-radius: 5px;">
+                    View More
+                </button>
+            </a>
+        </div>
     </section>
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials">
-        <h3>Testimonials</h3>
+        <h3>Reviews</h3>
         <div class="testimonial-item">
             <p>"INTENCE DETAILING did an amazing job on my car. It looks brand new!"</p>
             <span>- Alex P.</span>
@@ -275,94 +481,5 @@
     <footer class="footer">
         <p>&copy; 2025 INTENCE DETAILING. All rights reserved.</p>
     </footer>
-</body>
-</html>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INTENCE DETAILING | Professional Car Detailing Services</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-</head>
-<body class="bg-black text-white">
-    <nav class="flex justify-between items-center p-6 bg-black border-b border-gray-800">
-        <h1 class="text-2xl font-bold text-yellow-500">INTENCE DETAILING</h1>
-        <button class="text-white">☰</button>
-    </nav>
-
-    <section class="p-10">
-        <h2 class="text-3xl font-bold mb-6">Visionary Car Detailing</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="bg-gray-900 p-6 rounded-lg">
-                <h3 class="text-xl font-semibold mb-2">Basic Interior Detail</h3>
-                <ul class="list-disc ml-6 text-gray-300">
-                    <li>Full vacuum</li>
-                    <li>Mats cleaned</li>
-                    <li>Interior steam, wipe down & blowout</li>
-                    <li>Door jams cleaned</li>
-                </ul>
-                <p class="mt-4 text-sm text-gray-500">
-                    • 3 row vehicle $149.99<br>
-                    • Sedan, small car, midsize, SUV, Ute $114.99
-                </p>
-                <button class="mt-4 bg-yellow-500 text-black px-4 py-2 rounded">Enquire Now</button>
-            </div>
-
-            <div class="bg-yellow-500 text-black p-6 rounded-lg border border-yellow-600">
-                <h3 class="text-xl font-semibold mb-2">Premium Interior Detail</h3>
-                <p class="text-sm font-bold mb-2">Most Popular Choice! Perfect for Deep Restoration</p>
-                <ul class="list-disc ml-6">
-                    <li>Full vacuum</li>
-                    <li>Complete interior deep clean (steamed, wipe down & blow out)</li>
-                    <li>Shampoo & Extract Seats/Carpets</li>
-                    <li>Steam Clean Seats/Carpets</li>
-                    <li>Full Clean On Mats & Leather Mats</li>
-                    <li>Leather Cleaned & Conditioned</li>
-                    <li>Windows cleaned</li>
-                </ul>
-                <p class="mt-4 text-sm">
-                    • 3 row vehicle $204.99<br>
-                    • Sedan, small car, midsize, SUV, Ute $179.99
-                </p>
-                <button class="mt-4 bg-black text-yellow-500 px-4 py-2 rounded">Enquire Now</button>
-            </div>
-
-            <div class="bg-gray-900 p-6 rounded-lg">
-                <h3 class="text-xl font-semibold mb-2">Basic Interior Detail + Basic Wash</h3>
-                <ul class="list-disc ml-6 text-gray-300">
-                    <li>Everything in Basic Interior Detail Plus:</li>
-                    <li>Foam cleanser + Hand wash</li>
-                    <li>Rim faces and tires cleaned</li>
-                    <li>Microfibre towel dry</li>
-                </ul>
-                <p class="mt-4 text-sm text-gray-500">
-                    • 3 row vehicle $179.99<br>
-                    • Sedan, small car, midsize, SUV, Ute $154.99
-                </p>
-                <button class="mt-4 bg-yellow-500 text-black px-4 py-2 rounded">Enquire Now</button>
-            </div>
-
-            <div class="bg-gray-900 p-6 rounded-lg">
-                <h3 class="text-xl font-semibold mb-2">Premium Interior Detail + Premium Wash</h3>
-                <ul class="list-disc ml-6 text-gray-300">
-                    <li>Everything in Premium Interior Detail plus:</li>
-                    <li>Foam cleanser + Hand wash</li>
-                    <li>Rim faces & tires cleaned</li>
-                    <li>Tire dressing applied</li>
-                    <li>Wheel barrel deep clean</li>
-                    <li>Ceramic coating applied</li>
-                    <li>BONUS: FREE vacuum and wipe down one month later</li>
-                </ul>
-                <p class="mt-4 text-sm text-gray-500">
-                    • 3 row vehicle $259.99<br>
-                    • Sedan, small car, midsize, SUV, Ute $234.99
-                </p>
-                <button class="mt-4 bg-yellow-500 text-black px-4 py-2 rounded">Enquire Now</button>
-            </div>
-        </div>
-    </section>
 </body>
 </html>
