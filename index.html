@@ -10,7 +10,7 @@
     <style>
         body {
             background-color: #151515;
-            color: white;
+            color: #ffffff;
         }
         .navbar {
             background-color: #151515;
@@ -66,7 +66,7 @@
         
         .services {
             padding: 64px 16px;
-            background-color: black;
+            background-color: #f7f7f7;
         }
         .services h3 {
             font-size: 30px;
@@ -131,7 +131,7 @@
             opacity: 1;
         }
         .gallery {
-            background-color: rgb(243 244 246);
+            background-color: #f7f7f7;
             padding: 64px 16px;
         }
         .gallery h3 {
@@ -150,7 +150,7 @@
         }
 
         .gallery-item {
-            background-color: #2D3748;
+            background-color: #ffffff;
             height: 160px;
             display: flex;
             align-items: center;
@@ -159,16 +159,17 @@
         }
         .testimonials {
             padding: 64px 16px;
-            background-color: black;
+            background-color: #ffffff;
         }
         .testimonials h3 {
             font-size: 30px;
             font-weight: bold;
             text-align: center;
             margin-bottom: 32px;
+            color: #000;
         }
         .testimonial-item {
-            background-color: #1b1b1b;
+            background-color: #f7f7f7;
             padding: 24px;
             border-radius: 16px;
             margin-bottom: 24px;
@@ -179,14 +180,15 @@
         }
         .testimonial-item p {
             margin-bottom: 8px;
+            color: #000;
         }
         .testimonial-item span {
-            color: white;
+            color: black;
             width: 200px;
         }
         .contact {
             padding: 64px 16px;
-            background-color: white;
+            background-color: #ffffff;
         }
         .contact h3 {
             font-size: 40px;
@@ -234,6 +236,7 @@
 
         .p-10 { 
             padding: 2.5rem; 
+            background-color: #ffffff;
         }
 
         .heading { 
@@ -261,14 +264,14 @@
         }
 
         .basic-detail, .basic-wash, .premium-wash {
-            background-color: #1b1b1b;
-            color: white;
+            background-color: #e5e5e5;
+            color: black;
         }
 
         .premium-detail {
-            background-color: #1b1b1b; 
-            color: white;
-            border: 2px solid #FFD700;
+            background-color: #e5e5e5; 
+            color: black;
+            border: 5px solid #00c8ff;
         }
 
         .pricing {
@@ -295,19 +298,20 @@
             font-size: 0.875rem;
             font-weight: bold;
             margin-bottom: 0.5rem;
+            color: #00c8ff;
         }
 
         .enquire-btn {
             margin-top: 1rem;
-            background-color: #FFD700;
-            color: #000; padding: 0.5rem 1rem;
+            background-color: #000;
+            color: white; padding: 0.5rem 1rem;
             border-radius: 0.5rem;
         }
 
         .premium-btn {
             margin-top: 1rem;
-            background-color: #FFD700;
-            color: #000; padding: 0.5rem 1rem;
+            background-color: #000;
+            color: white; padding: 0.5rem 1rem;
             border-radius: 0.5rem; 
         }
 
@@ -364,14 +368,17 @@
             width: 130px;
         }
 
-        .sponsor {
-            font-size: 50px;
-            text-align: center;
-            background-color: white;
+        .best-quality-section {
+            background-color: #f7f7f7;
+            color: black; /* Ensure text remains visible */
+            padding-bottom: 15px;
         }
+
 
         .sponsorimg {
             width: 50%;
+            padding-bottom: 80px;
+            justify-content: center;
         }
     </style>
 
@@ -414,14 +421,6 @@
         </div>
     </section>
 
-    <section class="sponsors"  >
-        <div style="font-size: 45px; font-weight: bold; text-align: center; padding-top: 20px; padding-bottom: 40px;">
-            <h3> Our Premium Quality Products</h3>
-        </div>
-        <div class="sponsorimg">
-            <img src="https://www.meguiars.com/themes/custom/meg/logo.png" style="width: 250px; height: auto; margin-left: 150px;">
-        </div>
-    </section>
 
     <section class="services">
         <div class="service">
@@ -432,24 +431,17 @@
             </div>
         </div>
         <div class="service">
-            <img src="https://res.cloudinary.com/dfqreujbo/image/upload/v1741215266/jmcrdiojiydglml0ww1e.jpg" alt="Service 3">
+            <img src="https://res.cloudinary.com/dfqreujbo/image/upload/v1741220066/pexels-photo-8192663_hlmx47.jpg" alt="Service 3">
             <div class="overlay">
-                <h3>Premium Interior detail</h3>
-                <p>A professional deep clean of your interior, to make it better that showroom quality.</p>
-            </div>
-        </div>
-        <div class="service">
-            <img src="image2.jpg" alt="Service 2">
-            <div class="overlay">
-                <h3>Basic Wash</h3>
-                <p>Short description of service 2.</p>
+                <h3>Engine Bay Detail</h3>
+                <p>A professional deep clean of your cars engine bay, sure to make it stand out.</p>
             </div>
         </div>
         <div class="service">
             <img src="https://res.cloudinary.com/dfqreujbo/image/upload/v1741215266/jmcrdiojiydglml0ww1e.jpg" alt="Service 3">
             <div class="overlay">
-                <h3>Premium Wash</h3>
-                <p>A professional wash of your car from top to very bottom.</p>
+                <h3>Exterior Detail</h3>
+                <p>A professional wash of your car from the top to the bottom.</p>
             </div>
         </div>
     </section>
@@ -548,7 +540,7 @@
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials">
-        <h3>Reviews</h3>
+        <h3>Testimonials</h3>
         <div class="testimonial-item">
             <p>"INTENCE DETAILING did an amazing job on my car. It looks brand new!"</p>
             <span>- Alex P.</span>
@@ -556,6 +548,15 @@
         <div class="testimonial-item">
             <p>"Their attention to detail is unmatched. Highly recommend!"</p>
             <span>- Jessica M.</span>
+        </div>
+    </section>
+
+    <section class="best-quality-section">
+        <div style="font-size: 45px; font-weight: light; text-align: center; padding-top: 20px; padding-bottom: 40px; color: #000;">
+            <h3> The best quality, <span style="font-weight: bold; color: #000;">the best brands.</span></h3>
+        </div>
+        <div class="sponsorimg">
+            <img src="https://www.meguiars.com/themes/custom/meg/logo.png" style="width: 250px; height: auto; margin-left: 150px;">
         </div>
     </section>
 
