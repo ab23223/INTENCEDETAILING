@@ -258,43 +258,47 @@
         }
 
         function submitReview() {
-        const name = document.getElementById('reviewerName').value;
+        const name = document.getElementById('reviewerName').value.trim();
         const rating = document.getElementById('reviewRating').value;
-        const message = document.getElementById('reviewMessage').value;
+        const message = document.getElementById('reviewMessage').value.trim();
 
-        if (name && rating && message) {
-            // Sending review data to the backend
-            fetch('https://your-backend-api-url.com/reviews', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    name: name,
-                    rating: rating,
-                    message: message
-                })
-            })
-            .then(response => response.json())
-            .then(data => {
-                alert('Thank you for your review!');
-                closeReviewModal();
-                // Optionally, you can add the review to the page dynamically
-                const testimonialSection = document.querySelector('#testimonials');
-                const newTestimonial = document.createElement('div');
-                newTestimonial.classList.add('testimonial-item', 'bg-white', 'p-6', 'rounded-lg', 'shadow-md');
-                newTestimonial.innerHTML = `
-                    <p class="text-gray-800 mb-2">"${message}"</p>
-                    <span class="text-gray-600">- ${name} (${rating} stars)</span>
-                `;
-                testimonialSection.appendChild(newTestimonial);
-            })
-            .catch(error => {
-                alert('There was an issue submitting your review. Please try again later.');
-            });
-        } else {
+        if (!name || !rating || !message) {
             alert('Please fill in all fields.');
+            return;
         }
+
+        fetch('https://shiny-space-capybara-v6g7g44j5gxvcxj6g-3000.app.github.dev/reviews', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                name: name,
+                rating: rating,
+                message: message
+            }),
+            credentials: 'same-origin' // Ensure credentials (if any) are included
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert('Thank you for your review!');
+            closeReviewModal();
+
+            // Add the new review dynamically
+            const testimonialSection = document.querySelector('#testimonials');
+            const newTestimonial = document.createElement('div');
+            newTestimonial.classList.add('testimonial-item', 'bg-white', 'p-6', 'rounded-lg', 'shadow-md');
+            newTestimonial.innerHTML = `
+                <p class="text-gray-800 mb-2">"${message}"</p>
+                <span class="text-gray-600">- ${name} (${rating} stars)</span>
+            `;
+            testimonialSection.appendChild(newTestimonial);
+        })
+        .catch(error => {
+            alert('Error submitting review. Please try again later.');
+            console.error(error);
+        });
     }
 
 
