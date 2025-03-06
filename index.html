@@ -5,386 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INTENCE DETAILING | Professional Car Detailing Services</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="/static/maincss.css">
 </head>
 <body>
-    <style>
-        body {
-            background-color: #151515;
-            color: #ffffff;
-        }
-        .navbar {
-            background-color: #151515;
-            padding: 1px;
-            padding-right: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #fff;
-        }
-        .navbar h1 {
-            font-size: 32px;
-            font-weight: bold;
-            color: white;
-            margin-left: -580px;
-        }
-        .navbar a {
-            margin: 0 8px;
-            color: white;
-            transition: color 0.3s;
-        }
-        .navbar a:hover {
-            color: white;
-        }
-        .hero {
-            background-image: url("https://www.lenosgarage.com/cdn/shop/articles/Premium-Car-Detailing-Microfiber-Towels-Featured.jpg?v=1693583709&width=1920");
-            padding: 250px 0;
-            text-align: left;
-            margin-top: -1px;
-        }
-        
-        .hero h2 {
-            font-size: 56px;
-            font-weight: bold;
-            margin-bottom: 16px;
-            margin-left: 50px;
-            color: white;
-        }
-
-        .hero p {
-            margin-bottom: 24px;
-            color: white;
-            margin-left: 50px;
-        }
-        .hero a {
-            background-color: white;
-            color: black;
-            padding: 8px 24px;
-            border-radius: 9999px;
-            font-weight: 600;
-            margin-left: 50px;
-        }
-        
-        .services {
-            padding: 64px 16px;
-            background-color: #f7f7f7;
-        }
-        .services h3 {
-            font-size: 30px;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 32px;
-        }
-        .service-item {
-            background-color: white;
-            padding: 24px;
-            border-radius: 16px;
-            border: 1px solid #4B5563;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .service-item h4 {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
-        .service-item p {
-            color: #9CA3AF;
-        }
-
-        .services {
-            display: flex;
-            gap: 20px;
-        }
-        .service {
-            position: relative;
-            width: 800px;
-            height: 500px;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease-in-out;
-        }
-        .service img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease-in-out;
-        }
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-        }
-        .service:hover img {
-            transform: scale(1.1);
-        }
-        .service:hover .overlay {
-            opacity: 1;
-        }
-        .gallery {
-            background-color: #f7f7f7;
-            padding: 64px 16px;
-        }
-        .gallery h3 {
-            font-size: 40px;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 32px;
-            color: black;
-        }
-
-        .gallery p {
-            font-size: 18px;
-            text-align: center;
-            margin-bottom: 32px;
-            color: black;
-        }
-
-        .gallery-item {
-            background-color: #ffffff;
-            height: 160px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid #4B5563;
-        }
-        .testimonials {
-            padding: 64px 16px;
-            background-color: #ffffff;
-        }
-        .testimonials h3 {
-            font-size: 30px;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 32px;
-            color: #000;
-        }
-        .testimonial-item {
-            background-color: #f7f7f7;
-            padding: 24px;
-            border-radius: 16px;
-            margin-bottom: 24px;
-            border: 1px solid #4B5563;
-            margin-left: 350px;
-            justify-items: center;
-            width: 800px;
-        }
-        .testimonial-item p {
-            margin-bottom: 8px;
-            color: #000;
-        }
-        .testimonial-item span {
-            color: black;
-            width: 200px;
-        }
-        .contact {
-            padding: 64px 16px;
-            background-color: #ffffff;
-        }
-        .contact h3 {
-            font-size: 40px;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 32px;
-            color: black;
-        }
-        .contact-form {
-            max-width: 640px;
-            margin: 0 auto;
-            background-color: transparent;
-            margin-left: 700px;
-            padding: 32px;
-        }
-        .contact-form label {
-            display: block;
-            margin-bottom: 8px;
-            color: black;
-        }
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 8px;
-            background-color: transparent;
-            border: 1px solid #4B5563;
-            border-radius: 6px;
-            color: white;
-        }
-        .contact-form button {
-            background-color: black;
-            color: white;
-            padding: 8px 24px;
-            border-radius: 9999px;
-            font-weight: 600;
-            margin-top: 16px;
-        }
-        .footer {
-            background-color: black;
-            color: #9CA3AF;
-            text-align: center;
-            padding: 16px;
-            border-top: 1px solid #4B5563;
-        }
-
-        .p-10 { 
-            padding: 2.5rem; 
-            background-color: #ffffff;
-        }
-
-        .heading { 
-            font-size: 1.875rem;
-            font-weight: bold;
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-
-        .service-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-
-        @media(min-width: 768px) {
-            .service-grid { 
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        .service-card {
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-        }
-
-        .basic-detail, .basic-wash, .premium-wash {
-            background-color: #e5e5e5;
-            color: black;
-        }
-
-        .premium-detail {
-            background-color: #e5e5e5; 
-            color: black;
-            border: 5px solid #00c8ff;
-        }
-
-        .pricing {
-            margin-top: 1rem;
-            font-size: 0.875rem;
-            color: #6b7280;
-        }
-
-        .pricing1 {
-            margin-top: 1rem;
-            font-size: 0.875rem;
-            color: #6b7280;
-            padding-top: 100px;
-        }
-
-        .pricing2 {
-            margin-top: 1rem;
-            font-size: 0.875rem;
-            color: #6b7280;
-            padding-top: 80px;
-        }
-        
-        .popular-choice {
-            font-size: 0.875rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-            color: #00c8ff;
-        }
-
-        .enquire-btn {
-            margin-top: 1rem;
-            background-color: #000;
-            color: white; padding: 0.5rem 1rem;
-            border-radius: 0.5rem;
-        }
-
-        .premium-btn {
-            margin-top: 1rem;
-            background-color: #000;
-            color: white; padding: 0.5rem 1rem;
-            border-radius: 0.5rem; 
-        }
-
-        .service-card h3{
-            font-size: 20px;
-            font-weight: bold;
-            padding-bottom: 20px;
-        }
-
-        #info-section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 50px;
-            background-color: #fff; /* White background to keep it clean */
-        }
-
-        .info-text {
-            flex: 1;
-            padding: 20px;
-            text-align: left;
-        }
-
-        .info-text h2 {
-            font-size: 45px;
-            margin-bottom: 40px;
-            margin-top: -270px;
-            margin-left: 50px;
-            margin-right: 300;
-            color: black;
-            font-weight: 600;
-        }
-
-        .info-text p {
-            font-size: 18px;
-            line-height: 1.6;
-            color: #555;
-            margin-left: 50px;
-            margin-right: -100px;
-        }
-        
-
-        .info-image {
-            flex: 1;
-            text-align: center;
-        }
-
-        .info-image img {
-            max-width: 70%;
-            max-height: 600px;
-            border-radius: 10px; /* Adds rounded corners for a softer look */
-        }
-        .navbar img{
-            width: 130px;
-        }
-
-        .best-quality-section {
-            background-color: #f7f7f7;
-            color: black; /* Ensure text remains visible */
-            padding-bottom: 15px;
-        }
-
-
-        .sponsorimg {
-            width: 50%;
-            padding-bottom: 80px;
-            justify-content: center;
-        }
-    </style>
-
     <!-- Navbar -->
     <nav class="navbar">
-        <img src="https://res.cloudinary.com/dfqreujbo/image/upload/v1738738526/INTEC_MEDIA1_famvag.png" alt="INTENCE MEDIA Logo" >
+        <img src="https://res.cloudinary.com/dfqreujbo/image/upload/v1738738526/INTEC_MEDIA1_famvag.png" alt="INTENCE MEDIA Logo">
         <h1>INTENCE DETAILING</h1>
         <div>
             <a href="#services">Services</a>
@@ -420,7 +46,6 @@
             <img src="https://res.cloudinary.com/dfqreujbo/image/upload/v1738712765/GM_SHOW_3_y2ykrq.jpg" alt="Photography in action">
         </div>
     </section>
-
 
     <section class="services">
         <div class="service">
@@ -538,18 +163,56 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
-        <h3>Testimonials</h3>
-        <div class="testimonial-item">
-            <p>"INTENCE DETAILING did an amazing job on my car. It looks brand new!"</p>
-            <span>- Alex P.</span>
-        </div>
-        <div class="testimonial-item">
-            <p>"Their attention to detail is unmatched. Highly recommend!"</p>
-            <span>- Jessica M.</span>
+    <!-- Submit a Review Section -->
+    <!-- Testimonials and Submit Review Section -->
+    <section id="testimonials" class="testimonials bg-gray-100 py-12">
+        <div class="container mx-auto text-center">
+            <h3 class="text-3xl font-bold mb-4 text-black">Testimonials</h3>
+
+            <!-- Submit Review Button -->
+            <div class="mb-8">
+                <button onclick="openReviewModal()" class="bg-black text-white py-2 px-4 rounded">Add a Review</button>
+            </div>
+
+            <!-- Testimonials Display -->
+            <div class="testimonial-item bg-white p-6 rounded-lg shadow-md mb-4">
+                <p class="text-gray-800 mb-2">"INTENCE DETAILING did an amazing job on my car. It looks brand new!"</p>
+                <span class="text-gray-600">- Alex P.</span>
+            </div>
+            <div class="testimonial-item bg-white p-6 rounded-lg shadow-md">
+                <p class="text-gray-800 mb-2">"Their attention to detail is unmatched. Highly recommend!"</p>
+                <span class="text-gray-600">- Jessica M.</span>
+            </div>
         </div>
     </section>
+
+    <!-- Review Modal -->
+    <div id="reviewModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <div class="bg-white p-8 rounded-lg w-full max-w-md mx-4">
+            <h4 class="text-2xl font-bold mb-4">Submit Your Review</h4>
+            <form id="reviewForm">
+                <div class="mb-4">
+                    <input type="text" id="reviewerName" class="w-full p-2 border border-gray-300 rounded" placeholder="Name" />
+                </div>
+                <div class="mb-4">
+                    <select id="reviewRating" class="w-full p-2 border border-gray-300 rounded">
+                        <option value="5">5 Stars</option>
+                        <option value="4">4 Stars</option>
+                        <option value="3">3 Stars</option>
+                        <option value="2">2 Stars</option>
+                        <option value="1">1 Star</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <textarea id="reviewMessage" class="w-full p-2 border border-gray-300 rounded" placeholder="Message"></textarea>
+                </div>
+                <div class="flex justify-end">
+                    <button type="button" onclick="closeReviewModal()" class="bg-gray-500 text-white py-2 px-4 rounded mr-2">Cancel</button>
+                    <button type="button" onclick="submitReview()" class="bg-black text-white py-2 px-4 rounded">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <section class="best-quality-section">
         <div style="font-size: 45px; font-weight: light; text-align: center; padding-top: 20px; padding-bottom: 40px; color: #000;">
@@ -580,9 +243,81 @@
         </form>
     </section>
 
-    <!-- Footer -->
+        <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2025 INTENCE DETAILING. All rights reserved.</p>
     </footer>
+
+    <script>
+        function openReviewModal() {
+            document.getElementById('reviewModal').classList.remove('hidden');
+        }
+
+        function closeReviewModal() {
+            document.getElementById('reviewModal').classList.add('hidden');
+        }
+
+        function submitReview() {
+        const name = document.getElementById('reviewerName').value;
+        const rating = document.getElementById('reviewRating').value;
+        const message = document.getElementById('reviewMessage').value;
+
+        if (name && rating && message) {
+            // Sending review data to the backend
+            fetch('https://your-backend-api-url.com/reviews', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: name,
+                    rating: rating,
+                    message: message
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Thank you for your review!');
+                closeReviewModal();
+                // Optionally, you can add the review to the page dynamically
+                const testimonialSection = document.querySelector('#testimonials');
+                const newTestimonial = document.createElement('div');
+                newTestimonial.classList.add('testimonial-item', 'bg-white', 'p-6', 'rounded-lg', 'shadow-md');
+                newTestimonial.innerHTML = `
+                    <p class="text-gray-800 mb-2">"${message}"</p>
+                    <span class="text-gray-600">- ${name} (${rating} stars)</span>
+                `;
+                testimonialSection.appendChild(newTestimonial);
+            })
+            .catch(error => {
+                alert('There was an issue submitting your review. Please try again later.');
+            });
+        } else {
+            alert('Please fill in all fields.');
+        }
+    }
+
+
+        // Automatically hide placeholder text when typing starts
+        document.getElementById('reviewerName').addEventListener('focus', function () {
+            this.placeholder = ''; // Remove placeholder when focused
+        });
+
+        document.getElementById('reviewerName').addEventListener('blur', function () {
+            if (!this.value) {
+                this.placeholder = 'Name'; // Reset placeholder if the field is empty
+            }
+        });
+
+        document.getElementById('reviewMessage').addEventListener('focus', function () {
+            this.placeholder = ''; // Remove placeholder when focused
+        });
+
+        document.getElementById('reviewMessage').addEventListener('blur', function () {
+            if (!this.value) {
+                this.placeholder = 'Message'; // Reset placeholder if the field is empty
+            }
+        });
+    </script>
 </body>
 </html>
