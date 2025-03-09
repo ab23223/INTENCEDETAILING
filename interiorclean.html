@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interior Detail | INTENCE DETAILING</title>
+    <title>Interior Cleaning | INTENCE DETAILING</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <link rel="stylesheet" href="/static/maincss.css">
-</head>
-<body>
     <style>
         body {
             background-color: #151515;
             color: #ffffff;
         }
+
+        .navbar img{
+            width: 130px;
+        }
         .navbar {
             background-color: #151515;
-            padding: 1px;
+            padding: 0px;
             padding-right: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #fff;
         }
         .navbar h1 {
             font-size: 32px;
@@ -36,7 +37,179 @@
         .navbar a:hover {
             color: white;
         }
+        
+
+
+
+        /* Hero Section */
+        .hero {
+            background-image: url("https://www.lenosgarage.com/cdn/shop/articles/Premium-Car-Detailing-Microfiber-Towels-Featured.jpg?v=1693583709&width=1920");
+            padding: 250px 0;
+            text-align: left;
+            margin-top: -1px;
+        }
+
+        .hero h2 {
+            font-size: 66px;
+            font-weight: bold;
+            margin-bottom: 16px;
+            margin-left: 50px;
+            color: white;
+        }
+        .hero p {
+            margin-bottom: 24px;
+            color: white;
+            margin-left: 50px;
+            font-size: 20px;
+        }
+        .hero a {
+            background-color: white;
+            color: black;
+            padding: 8px 24px;
+            border-radius: 9999px;
+            font-weight: 600;
+            margin-left: 50px;
+        }
+
+        /* Service Details Section */
+        .service-details {
+            padding: 80px 40px;
+            background-color: #fff;
+            text-align: center;
+        }
+        .service-details h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .service-details p {
+            font-size: 18px;
+            color: #777;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            background-color: #222;
+            color: white;
+            padding: 80px 40px;
+            text-align: center;
+        }
+        .pricing h3 {
+            font-size: 48px;
+            margin-bottom: 40px;
+        }
+        .pricing .pricing-card {
+            background-color: #333;
+            border-radius: 10px;
+            padding: 40px;
+            margin: 20px;
+            display: inline-block;
+            width: 280px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+        .pricing .pricing-card:hover {
+            transform: translateY(-10px);
+        }
+        .pricing .pricing-card h4 {
+            font-size: 24px;
+            color: #00c8ff;
+            margin-bottom: 20px;
+        }
+        .pricing .pricing-card ul {
+            text-align: left;
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 20px;
+        }
+        .pricing .pricing-card ul li {
+            font-size: 16px;
+            color: #bbb;
+            margin: 10px 0;
+        }
+        .pricing .pricing-card .price {
+            font-size: 32px;
+            font-weight: 600;
+            color: #00c8ff;
+            margin-bottom: 20px;
+        }
+        .pricing .pricing-card .btn {
+            padding: 12px 30px;
+            background-color: #00c8ff;
+            color: #333;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .pricing .pricing-card .btn:hover {
+            background-color: #0099cc;
+        }
+
+        /* Contact Form Section */
+        .contact-form {
+            background-color: #f9f9f9;
+            padding: 60px 40px;
+            text-align: center;
+        }
+        .contact-form h3 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .contact-form form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form form input,
+        .contact-form form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            color: #333;
+        }
+        .contact-form form button {
+            padding: 12px 30px;
+            background-color: #00c8ff;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 30px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .contact-form form button:hover {
+            background-color: #0099cc;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #121212;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        footer p {
+            font-size: 14px;
+        }
+
     </style>
+</head>
+
+<body>
+
     <!-- Navbar -->
     <nav class="navbar">
         <img src="https://res.cloudinary.com/dfqreujbo/image/upload/v1738738526/INTEC_MEDIA1_famvag.png" alt="INTENCE MEDIA Logo">
@@ -49,5 +222,73 @@
             <a href="#contact">Contact</a>
         </div>
     </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <h2>Interior Cleaning</h2>
+        <p>Deep clean your car's interior and enjoy a pristine driving experience!</p>
+        <a href="#pricing" class="btn">View Pricing</a>
+    </section>
+
+    <!-- Service Details Section -->
+    <section class="service-details" id="services">
+        <h2>Our Interior Cleaning Service</h2>
+        <p>Our interior cleaning service includes a complete cleaning of your car’s interior. We thoroughly vacuum the seats and carpets, clean all surfaces, and remove any stains and odors. We ensure that your vehicle looks and smells fresh after each cleaning. We use eco-friendly products to ensure the safety and comfort of our customers.</p>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <h3>Choose Your Package</h3>
+        <div class="pricing-card">
+            <h4>Standard Interior Clean</h4>
+            <ul>
+                <li>Vacuuming seats & carpets</li>
+                <li>Wipe down surfaces</li>
+                <li>Window cleaning</li>
+                <li>Air freshener included</li>
+            </ul>
+            <div class="price">$99</div>
+            <a href="#contact" class="btn">Book Now</a>
+        </div>
+        <div class="pricing-card">
+            <h4>Deep Interior Clean</h4>
+            <ul>
+                <li>Shampoo carpets & seats</li>
+                <li>Detailing of vents</li>
+                <li>Fabric protection</li>
+                <li>Odor removal treatment</li>
+            </ul>
+            <div class="price">$179</div>
+            <a href="#contact" class="btn">Book Now</a>
+        </div>
+        <div class="pricing-card">
+            <h4>Luxury Interior Detail</h4>
+            <ul>
+                <li>Everything in Deep Clean</li>
+                <li>Leather seat conditioning</li>
+                <li>Full deodorizing</li>
+                <li>Premium interior protection</li>
+            </ul>
+            <div class="price">$250</div>
+            <a href="#contact" class="btn">Book Now</a>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form" id="contact">
+        <h3>Get in Touch</h3>
+        <form action="#">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 INTENCE DETAILING. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
