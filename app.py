@@ -17,6 +17,20 @@ def server_static(filepath):
 def index():
     return template('index')  # Make sure you have an 'index.tpl' template in the 'views/' folder
 
+# Route for home page (shows albums or general content) 
+@route('/interiorclean.html')
+def interiorclean():
+    return template('interiorclean.html')  # Make sure you have an 'index.tpl' template in the 'views/' folder
+
+# Route for home page (shows albums or general content) 
+@route('/exteriorclean.html')
+def exteriorclean():
+    return template('exteriorclean.html')  # Make sure you have an 'index.tpl' template in the 'views/' folder
+
+# Route for home page (shows albums or general content) 
+@route('/enginebayclean.html')
+def enginebayclean():
+    return template('enginebayclean.html')  # Make sure you have an 'index.tpl' template in the 'views/' folder
 
 # Run the app
 run(reloader=True)

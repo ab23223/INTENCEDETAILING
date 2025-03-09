@@ -394,18 +394,31 @@
         background-color: #999;
     }
 
+    .services-title {
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+        color: black;
+        font-size: 45px;
+        padding: 10px;
+        background-color: #f7f7f7;
+    }
+
     /* Services Container */
     .services {
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         gap: 20px;
         flex-wrap: wrap;
         margin-top: 0;
-        padding: -20px;
+        padding: 30px; /* Fix padding issue */
+        width: auto; /* Ensures full width of the page */
+        max-width: auto; /* Optional, restricts the max width for alignment */
+        margin: 0 auto; /* Centers the container horizontally */
     }
 
     .services a {
-        width: 30%; /* Ensures three items fit per row */
+        width: auto; /* Ensures three items fit per row */
         text-decoration: none; /* Removes default styling */
     }
 
@@ -413,6 +426,7 @@
         position: relative;
         width: 100%; /* Ensures it fits within the anchor */
         max-width: 350px; /* Adjust this if necessary */
+        height: 500px; /* Ensure the height is set */
         overflow: hidden;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional box-shadow */
@@ -420,10 +434,10 @@
     }
 
     .service img {
-        width: 100%;
-        height: auto;
+        width: 100%; /* Ensure the image fits the width */
+        height: 100%; /* Ensure the image fills the height */
+        object-fit: cover; /* Ensures image covers the container without gaps */
         display: block;
-        object-fit: cover;
         transition: transform 0.3s ease-in-out;
         border-radius: 10px;
     }
@@ -465,7 +479,7 @@
     /* Service Card Styling */
     .service-item {
         background-color: white;
-        padding-top: 24px;
+        padding-bottom: 24px;
         border-radius: 16px;
         border: 1px solid #4B5563;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -522,36 +536,39 @@
         </div>
     </section>
 
-    <section class="services">
-        <a href="interiorclean.html">
-            <div class="service">
-                <img src="https://res.cloudinary.com/dfqreujbo/image/upload/v1741215266/ibfudzgflhovb1wxiaqs.jpg" alt="Interior Detail">
-                <div class="overlay">
-                    <h3>Interior Detail</h3>
-                    <p>Deep cleaning and protection of the entire interior.</p>
+    <section>
+        <h2 class="services-title">Services We Offer</h2>
+        <section class="services">
+            <a href="interiorclean.html">
+                <div class="service">
+                    <img src="https://res.cloudinary.com/dfqreujbo/image/upload/v1741215266/ibfudzgflhovb1wxiaqs.jpg" alt="Interior Detail">
+                    <div class="overlay">
+                        <h3>Interior Detail</h3>
+                        <p>Deep cleaning and protection of the entire interior.</p>
+                    </div>
                 </div>
-            </div>
-        </a>
-        
-        <a href="enginebayclean.html">
-            <div class="service">
-                <img src="https://res.cloudinary.com/dfqreujbo/image/upload/v1741220066/pexels-photo-8192663_hlmx47.jpg" alt="Engine Bay Detail">
-                <div class="overlay">
-                    <h3>Engine Bay Detail</h3>
-                    <p>A professional deep clean of your car's engine bay, sure to make it stand out.</p>
+            </a>
+            
+            <a href="enginebayclean.html">
+                <div class="service">
+                    <img src="https://res.cloudinary.com/dfqreujbo/image/upload/v1741220066/pexels-photo-8192663_hlmx47.jpg" alt="Engine Bay Detail">
+                    <div class="overlay">
+                        <h3>Engine Bay Detail</h3>
+                        <p>A professional deep clean of your car's engine bay, sure to make it stand out.</p>
+                    </div>
                 </div>
-            </div>
-        </a>
-        
-        <a href="exteriorclean.html">
-            <div class="service">
-                <img src="https://res.cloudinary.com/dfqreujbo/image/upload/v1741215266/jmcrdiojiydglml0ww1e.jpg" alt="Exterior Detail">
-                <div class="overlay">
-                    <h3>Exterior Detail</h3>
-                    <p>A professional wash of your car from the top to the bottom, removing every spec of dirt.</p>
+            </a>
+            
+            <a href="exteriorclean.html">
+                <div class="service">
+                    <img src="https://res.cloudinary.com/dfqreujbo/image/upload/v1741215266/jmcrdiojiydglml0ww1e.jpg" alt="Exterior Detail">
+                    <div class="overlay">
+                        <h3>Exterior Detail</h3>
+                        <p>A professional wash of your car from the top to the bottom, removing every spec of dirt.</p>
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
+        </section>
     </section>
     
     <section class="p-10">
