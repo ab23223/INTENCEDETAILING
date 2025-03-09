@@ -24,7 +24,7 @@
     <!-- Hero Section -->
     <header class="hero">
         <h2>Professional Car Detailing Services</h2>
-        <p>Make your car shine like new with our expert detailing packages.</p>
+        <p>We will restore your car to better than like-new condition, remove every stain and protect your paint for YEARS.</p>
         <a href="#contact">Book Now</a>
     </header>
 
@@ -66,7 +66,7 @@
             <img src="https://res.cloudinary.com/dfqreujbo/image/upload/v1741215266/jmcrdiojiydglml0ww1e.jpg" alt="Service 3">
             <div class="overlay">
                 <h3>Exterior Detail</h3>
-                <p>A professional wash of your car from the top to the bottom.</p>
+                <p>A professional wash of your car from the top to the bottom removing every spec of dirt.</p>
             </div>
         </div>
     </section>
@@ -164,16 +164,15 @@
     </section>
 
     <!-- Submit a Review Section -->
-    <!-- Testimonials and Submit Review Section -->
     <section id="testimonials" class="testimonials bg-gray-100 py-12">
         <div class="container mx-auto text-center">
             <h3 class="text-3xl font-bold mb-4 text-black">Testimonials</h3>
-
+    
             <!-- Submit Review Button -->
             <div class="mb-8">
-                <button onclick="openReviewModal()" class="bg-black text-white py-2 px-4 rounded">Add a Review</button>
+                <button id="openReviewForm" class="bg-black text-white py-2 px-4 rounded">Add a Review</button>
             </div>
-
+    
             <!-- Testimonials Display -->
             <div class="testimonial-item bg-white p-6 rounded-lg shadow-md mb-4">
                 <p class="text-gray-800 mb-2">"INTENCE DETAILING did an amazing job on my car. It looks brand new!"</p>
@@ -185,35 +184,42 @@
             </div>
         </div>
     </section>
-
-    <!-- Review Modal -->
-    <div id="reviewModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
-        <div class="bg-white p-8 rounded-lg w-full max-w-md mx-4">
-            <h4 class="text-2xl font-bold mb-4">Submit Your Review</h4>
-            <form id="reviewForm">
+    
+    <!-- Review Form Modal -->
+    <div id="reviewModal" class="hidden fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-50 flex items-center justify-center">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+            <h2 class="text-2xl font-semibold mb-4">Submit a Review</h2>
+            <form action="https://formspree.io/f/xnnpawrn" method="POST">
                 <div class="mb-4">
-                    <input type="text" id="reviewerName" class="w-full p-2 border border-gray-300 rounded" placeholder="Name" />
+                    <label for="firstName" class="block text-sm">First Name</label>
+                    <input type="text" id="firstName" name="firstName" class="w-full p-2 border border-gray-300 rounded" placeholder="Enter your first name" onfocus="this.placeholder=''" onblur="this.placeholder='Enter your first name'" required>
                 </div>
                 <div class="mb-4">
-                    <select id="reviewRating" class="w-full p-2 border border-gray-300 rounded">
-                        <option value="5">5 Stars</option>
-                        <option value="4">4 Stars</option>
-                        <option value="3">3 Stars</option>
-                        <option value="2">2 Stars</option>
+                    <label for="lastName" class="block text-sm">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" class="w-full p-2 border border-gray-300 rounded" placeholder="Enter your last name" onfocus="this.placeholder=''" onblur="this.placeholder='Enter your last name'" required>
+                </div>
+                <div class="mb-4">
+                    <label for="rating" class="block text-sm">Rating</label>
+                    <select id="rating" name="rating" class="w-full p-2 border border-gray-300 rounded" required>
                         <option value="1">1 Star</option>
+                        <option value="2">2 Stars</option>
+                        <option value="3">3 Stars</option>
+                        <option value="4">4 Stars</option>
+                        <option value="5">5 Stars</option>
                     </select>
                 </div>
                 <div class="mb-4">
-                    <textarea id="reviewMessage" class="w-full p-2 border border-gray-300 rounded" placeholder="Message"></textarea>
+                    <label for="message" class="block text-sm">Message</label>
+                    <textarea id="message" name="message" rows="4" class="w-full p-2 border border-gray-300 rounded" placeholder="Type your message here..." onfocus="this.placeholder=''" onblur="this.placeholder='Type your message here...'" required></textarea>
                 </div>
-                <div class="flex justify-end">
-                    <button type="button" onclick="closeReviewModal()" class="bg-gray-500 text-white py-2 px-4 rounded mr-2">Cancel</button>
-                    <button type="button" onclick="submitReview()" class="bg-black text-white py-2 px-4 rounded">Submit</button>
+                <div class="flex justify-between items-center">
+                    <button type="button" id="closeModal" class="bg-gray-500 text-white py-2 px-4 rounded">Cancel</button>
+                    <button type="submit" class="bg-black text-white py-2 px-4 rounded">Submit</button>
                 </div>
             </form>
         </div>
     </div>
-
+        
     <section class="best-quality-section">
         <div style="font-size: 45px; font-weight: light; text-align: center; padding-top: 20px; padding-bottom: 40px; color: #000;">
             <h3> The best quality, <span style="font-weight: bold; color: #000;">the best brands.</span></h3>
@@ -243,85 +249,42 @@
         </form>
     </section>
 
-        <!-- Footer -->
+    <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2025 INTENCE DETAILING. All rights reserved.</p>
     </footer>
 
     <script>
-        function openReviewModal() {
+        // Open the modal when the "Add a Review" button is clicked
+        document.getElementById('openReviewForm').addEventListener('click', function() {
             document.getElementById('reviewModal').classList.remove('hidden');
-        }
-
-        function closeReviewModal() {
+        });
+    
+        // Close the modal when the "Cancel" button is clicked
+        document.getElementById('closeModal').addEventListener('click', function() {
             document.getElementById('reviewModal').classList.add('hidden');
-        }
-
-        function submitReview() {
-        const name = document.getElementById('reviewerName').value.trim();
-        const rating = document.getElementById('reviewRating').value;
-        const message = document.getElementById('reviewMessage').value.trim();
-
-        if (!name || !rating || !message) {
-            alert('Please fill in all fields.');
-            return;
-        }
-
-        fetch('https://shiny-space-capybara-v6g7g44j5gxvcxj6g-3000.app.github.dev/reviews', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify({
-                name: name,
-                rating: rating,
-                message: message
-            }),
-            credentials: 'same-origin' // Ensure credentials (if any) are included
-        })
-        .then(response => response.json())
-        .then(data => {
-            alert('Thank you for your review!');
-            closeReviewModal();
-
-            // Add the new review dynamically
-            const testimonialSection = document.querySelector('#testimonials');
-            const newTestimonial = document.createElement('div');
-            newTestimonial.classList.add('testimonial-item', 'bg-white', 'p-6', 'rounded-lg', 'shadow-md');
-            newTestimonial.innerHTML = `
-                <p class="text-gray-800 mb-2">"${message}"</p>
-                <span class="text-gray-600">- ${name} (${rating} stars)</span>
-            `;
-            testimonialSection.appendChild(newTestimonial);
-        })
-        .catch(error => {
-            alert('Error submitting review. Please try again later.');
-            console.error(error);
         });
-    }
-
-
-        // Automatically hide placeholder text when typing starts
-        document.getElementById('reviewerName').addEventListener('focus', function () {
-            this.placeholder = ''; // Remove placeholder when focused
-        });
-
-        document.getElementById('reviewerName').addEventListener('blur', function () {
-            if (!this.value) {
-                this.placeholder = 'Name'; // Reset placeholder if the field is empty
-            }
-        });
-
-        document.getElementById('reviewMessage').addEventListener('focus', function () {
-            this.placeholder = ''; // Remove placeholder when focused
-        });
-
-        document.getElementById('reviewMessage').addEventListener('blur', function () {
-            if (!this.value) {
-                this.placeholder = 'Message'; // Reset placeholder if the field is empty
-            }
+    
+        // Handle form submission via JavaScript to show thank you message without reload
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();  // Prevent page reload on submit
+    
+            // Show "Thank You" message
+            const thankYouMessage = document.createElement('div');
+            thankYouMessage.textContent = 'Thank you for your review!';
+            thankYouMessage.classList.add('fixed', 'top-0', 'left-0', 'w-full', 'bg-green-500', 'text-white', 'p-4', 'text-center');
+            document.body.appendChild(thankYouMessage);
+    
+            // Hide the modal
+            document.getElementById('reviewModal').classList.add('hidden');
+    
+            // Remove the "Thank You" message after 3 seconds
+            setTimeout(() => {
+                thankYouMessage.remove();
+            }, 3000);
         });
     </script>
+    
+
 </body>
 </html>
