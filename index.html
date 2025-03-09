@@ -8,6 +8,282 @@
     <link rel="stylesheet" href="/static/maincss.css">
 </head>
 <body>
+
+    <style> 
+    body {
+        background-color: #151515;
+        color: #ffffff;
+    }
+
+    .navbar {
+        background-color: #151515;
+        padding: 1px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #fff;
+    }
+
+    .navbar h1 {
+        font-size: 32px;
+        font-weight: bold;
+        color: white;
+        margin-left: -580px;
+    }
+
+    .navbar a, .hero p, .hero h2, .hero a {
+        color: white;
+        transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+        color: white;
+    }
+
+    .hero {
+        background-image: url("https://www.lenosgarage.com/cdn/shop/articles/Premium-Car-Detailing-Microfiber-Towels-Featured.jpg?v=1693583709&width=1920");
+        padding: 250px 0;
+        text-align: left;
+        margin-top: -1px;
+    }
+
+    .hero h2, .hero p, .hero a {
+        margin-left: 50px;
+    }
+
+    .hero h2 {
+        font-size: 56px;
+        font-weight: bold;
+        margin-bottom: 16px;
+    }
+
+    .hero p {
+        margin-bottom: 24px;
+    }
+
+    .hero a {
+        background-color: white;
+        padding: 8px 24px;
+        border-radius: 9999px;
+        font-weight: 600;
+        color: black;
+    }
+
+    .services, .gallery, .testimonials, .contact {
+        padding: 64px 16px;
+        background-color: #f7f7f7;
+    }
+
+    .services h3, .gallery h3, .contact h3, .testimonials h3 {
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 32px;
+    }
+
+    .service-item, .testimonial-item {
+        background-color: white;
+        padding: 24px;
+        border-radius: 16px;
+        border: 1px solid #4B5563;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-item h4, .service-card h3 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    .service-item p, .testimonial-item p {
+        color: #9CA3AF;
+    }
+
+    .service {
+        position: relative;
+        max-width: 350px;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .service img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 10px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .service:hover img {
+        transform: scale(1.1);
+    }
+
+    .overlay {
+        position: absolute;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    .service:hover .overlay {
+        opacity: 1;
+    }
+
+    .contact-form {
+        max-width: 640px;
+        margin: 0 auto;
+        background-color: transparent;
+        padding: 32px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        width: 100%;
+        padding: 8px;
+        background-color: transparent;
+        border: 1px solid #4B5563;
+        border-radius: 6px;
+        color: white;
+    }
+
+    .contact-form button {
+        background-color: black;
+        color: white;
+        padding: 8px 24px;
+        border-radius: 9999px;
+        font-weight: 600;
+        margin-top: 16px;
+    }
+
+    .footer {
+        background-color: black;
+        color: #9CA3AF;
+        text-align: center;
+        padding: 16px;
+        border-top: 1px solid #4B5563;
+    }
+
+    .service-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    @media(min-width: 768px) {
+        .service-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .service-card {
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        background-color: #e5e5e5;
+        color: black;
+    }
+
+    .premium-detail {
+        border: 5px solid #00c8ff;
+    }
+
+    .popular-choice {
+        font-size: 0.875rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        color: #00c8ff;
+    }
+
+    .enquire-btn, .premium-btn {
+        margin-top: 1rem;
+        background-color: #000;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+    }
+
+    #info-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 50px;
+        background-color: #fff;
+    }
+
+    .info-text {
+        flex: 1;
+        padding: 20px;
+        text-align: left;
+    }
+
+    .info-text h2 {
+        font-size: 45px;
+        margin-bottom: 40px;
+        color: black;
+        font-weight: 600;
+    }
+
+    .info-text p {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #555;
+    }
+
+    .info-image {
+        flex: 1;
+        text-align: center;
+    }
+
+    .info-image img {
+        max-width: 70%;
+        max-height: 600px;
+        border-radius: 10px;
+    }
+
+    .best-quality-section {
+        background-color: #f7f7f7;
+        color: black;
+        padding-bottom: 15px;
+    }
+
+    #submit-review {
+        background-color: #f4f4f4;
+        padding: 40px 0;
+    }
+
+    #submit-review .container {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #submit-review h3 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    #submit-review button {
+        background-color: #007BFF;
+        color: white;
+        font-size: 1.2rem;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    #submit-review button:hover {
+        background-color: #0056b3;
+    }
+    </style>
     <!-- Navbar -->
     <nav class="navbar">
         <img src="https://res.cloudinary.com/dfqreujbo/image/upload/v1738738526/INTEC_MEDIA1_famvag.png" alt="INTENCE MEDIA Logo">
@@ -48,29 +324,37 @@
     </section>
 
     <section class="services">
-        <div class="service">
-            <img src="https://res.cloudinary.com/dfqreujbo/image/upload/v1741215266/ibfudzgflhovb1wxiaqs.jpg" alt="Service 1">
-            <div class="overlay">
-                <h3>Interior Detail</h3>
-                <p>Deep cleaning and protection of the entire interior.</p>
+        <a href="interiorclean.html">
+            <div class="service">
+                <img src="https://res.cloudinary.com/dfqreujbo/image/upload/v1741215266/ibfudzgflhovb1wxiaqs.jpg" alt="Interior Detail">
+                <div class="overlay">
+                    <h3>Interior Detail</h3>
+                    <p>Deep cleaning and protection of the entire interior.</p>
+                </div>
             </div>
-        </div>
-        <div class="service">
-            <img src="https://res.cloudinary.com/dfqreujbo/image/upload/v1741220066/pexels-photo-8192663_hlmx47.jpg" alt="Service 3">
-            <div class="overlay">
-                <h3>Engine Bay Detail</h3>
-                <p>A professional deep clean of your cars engine bay, sure to make it stand out.</p>
+        </a>
+        
+        <a href="enginebayclean.html">
+            <div class="service">
+                <img src="https://res.cloudinary.com/dfqreujbo/image/upload/v1741220066/pexels-photo-8192663_hlmx47.jpg" alt="Engine Bay Detail">
+                <div class="overlay">
+                    <h3>Engine Bay Detail</h3>
+                    <p>A professional deep clean of your car's engine bay, sure to make it stand out.</p>
+                </div>
             </div>
-        </div>
-        <div class="service">
-            <img src="https://res.cloudinary.com/dfqreujbo/image/upload/v1741215266/jmcrdiojiydglml0ww1e.jpg" alt="Service 3">
-            <div class="overlay">
-                <h3>Exterior Detail</h3>
-                <p>A professional wash of your car from the top to the bottom removing every spec of dirt.</p>
+        </a>
+        
+        <a href="exteriorclean.html">
+            <div class="service">
+                <img src="https://res.cloudinary.com/dfqreujbo/image/upload/v1741215266/jmcrdiojiydglml0ww1e.jpg" alt="Exterior Detail">
+                <div class="overlay">
+                    <h3>Exterior Detail</h3>
+                    <p>A professional wash of your car from the top to the bottom, removing every spec of dirt.</p>
+                </div>
             </div>
-        </div>
+        </a>
     </section>
-
+    
     <section class="p-10">
         <h2 id="services" class="heading">Our Services</h2>
         <div class="service-grid">
