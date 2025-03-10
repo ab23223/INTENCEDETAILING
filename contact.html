@@ -80,20 +80,31 @@
             margin-left: 50px;
         }
 
-        .imagee{
+        .imagee img{
             width: 50%;
             margin-top: -900px;
             margin-left: 750px;
-            border-radius: 10px;
+            border-radius: 20px;
         }
 
         .contactdets {
-            margin-left: 900px;
+            margin-left: 750px;
             max-width: 400px;
             padding: 30px;
             border-radius: 8px;
             background-color: transparent;
             margin-top: 0px;
+            margin-bottom: 200px;
+        }
+
+        .contactdets1 {
+            margin-left: 1100px;
+            max-width: 400px;
+            padding: 30px;
+            padding-bottom: 100px;
+            border-radius: 8px;
+            background-color: transparent;
+            margin-top: -605px;
             margin-bottom: 100px;
         }
 
@@ -170,6 +181,18 @@
             color: #555;
         }
 
+        .contactdets1 h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #111;
+        }
+
+        .contactdets1 p {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
         footer {
             text-align: center;
             padding: 20px;
@@ -189,11 +212,11 @@
         <h1>INTENCE DETAILING</h1>
         <div>
             <a href="/">Home</a>
-            <a href="#services">Services</a>
-            <a href="#info-section">About Us</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#testimonials">Testimonials</a>
-            <a href="#contact">Contact</a>
+            <a href="/#services">Services</a>
+            <a href="/#info-section">About Us</a>
+            <a href="/#gallery">Gallery</a>
+            <a href="/#testimonials">Testimonials</a>
+            <a href="/#contact">Contact</a>
         </div>
     </nav>
     
@@ -210,18 +233,28 @@
     </section>
 
     <section class="contactform">
-        <form action="/submit-form" method="post">
+        <form id="contact-form" action="https://formspree.io/f/xnnpawrn" method="POST" onsubmit="submitForm(event)">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" required>
+            
             <label for="email">Email</label>
             <input type="email" id="email" name="email" required>
+            
             <label for="car">Car ( Make, Model, Year of Manufacture)</label>
             <input type="text" id="car" name="car">
+            
             <label for="message">Message</label>
             <textarea id="message" name="message"></textarea>
+            
             <button type="submit">Submit</button>
         </form>
     </section>
+    
+    <!-- Thank You Pop-Up Message -->
+    <div id="thank-you-popup" style="display:none; position: fixed; top: 0; left: 0; right: 0; background-color: #4CAF50; color: white; padding: 10px; text-align: center; font-size: 18px; z-index: 1000;">
+        Thank you for your email! We will get back to you shortly.
+    </div>
+
     
     <section class="imagee">
         <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FyJTIwd2FzaHxlbnwwfHwwfHx8MA%3D%3D">
@@ -233,12 +266,6 @@
             <p>INTENCE DETAILING<br>
                 Auckland, NZ<br> 
             </p>
-
-            <h2>Phone Number</h2>
-            <p>+64 204 511 510</p>
-            
-            <h2>Email</h2>
-            <p>info@intencedetailing.com</p>
             
             <h2>Hours</h2>
             <p>Monday: By Appointment<br>
@@ -252,8 +279,53 @@
         </div>
     </section>
 
+    <section class="contactdets1">
+        <div class="contact-details1">
+            <h2>Phone Number</h2>
+            <p>+64 204 511 510</p>
+            
+            <h2>Email</h2>
+            <p>info@intencedetailing.com</p>
+            
+        </div>
+    </section>
+
     <footer>
         <p>&copy; 2025 INTENCE DETAILING. All rights reserved.</p>
     </footer>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault(); // Prevent the default form submission
+    
+            // Show the thank you pop-up
+            const popup = document.getElementById('thank-you-popup');
+            popup.style.display = 'block';
+    
+            // Hide the pop-up after 3 seconds
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 3000);
+    
+            // Optionally, send the form data using JavaScript (AJAX request)
+            const form = document.getElementById('contact-form');
+            const formData = new FormData(form);
+    
+            fetch(form.action, {
+                method: form.method,
+                body: formData,
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Form submitted successfully:', data);
+            })
+            .catch(error => {
+                console.error('Error submitting form:', error);
+            });
+    
+            // Reset the form to clear all input fields
+            form.reset();
+        }
+    </script>
 </body>
 </html>
