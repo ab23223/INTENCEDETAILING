@@ -32,5 +32,10 @@ def exteriorclean():
 def enginebayclean():
     return template('enginebayclean.html')  # Make sure you have an 'index.tpl' template in the 'views/' folder
 
+# Route for home page (shows albums or general content) 
+@route('/contact.html')
+def contact():
+    return template('contact.html')  # Make sure you have an 'index.tpl' template in the 'views/' folder
+
 # Run the app
 run(reloader=True)
