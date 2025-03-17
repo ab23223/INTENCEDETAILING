@@ -1,0 +1,238 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #1a202c; /* Gray-900 */
+    color: white;
+    padding: 16px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 128px;
+}
+
+.logo-text {
+    margin-left: 16px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 16px;
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.navbar-link:hover {
+    color: #e2e8f0; /* Gray-200 */
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('https://www.lenosgarage.com/cdn/shop/articles/Premium-Car-Detailing-Microfiber-Towels-Featured.jpg?v=1693583709&width=1920');
+    padding: 250px 0;
+    text-align: left;
+    margin-top: -1px;
+}
+
+.hero h2 {
+    font-size: 56px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    margin-left: 50px;
+    color: white;
+}
+
+.hero p {
+    margin-bottom: 24px;
+    color: white;
+    margin-left: 50px;
+}
+
+.hero a {
+    background-color: white;
+    color: black;
+    padding: 8px 24px;
+    border-radius: 9999px;
+    font-weight: 600;
+    margin-left: 50px;
+}
+
+/* Section Styles */
+.section-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.section-description {
+    font-size: 18px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.about-us {
+    background-color: #f7fafc; /* Gray-100 */
+    padding: 80px 0;
+}
+
+.about-us-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.about-us-text {
+    width: 50%;
+}
+
+.about-us-img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    padding: 80px 0;
+    background-color: white;
+    text-align: center;
+}
+
+.why-choose-item {
+    width: 30%;
+    display: inline-block;
+    padding: 20px;
+}
+
+.item-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.item-description {
+    color: #4a5568; /* Gray-600 */
+    font-size: 16px;
+}
+
+/* Our Services Section */
+.our-services {
+    padding: 80px 0;
+    background-color: #f7fafc; /* Gray-100 */
+    text-align: center;
+}
+
+.service-item {
+    width: 30%;
+    display: inline-block;
+    padding: 20px;
+}
+
+.service-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.service-description {
+    color: #4a5568; /* Gray-600 */
+    font-size: 16px;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #1a202c; /* Gray-900 */
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.footer-about {
+    width: 30%;
+}
+
+.footer-links {
+    width: 30%;
+}
+
+.footer-social {
+    width: 30%;
+}
+
+.footer-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.footer-description {
+    font-size: 14px;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: #e2e8f0; /* Gray-200 */
+}
+
+.social-icons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.social-img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-text {
+    font-size: 14px;
+    margin-top: 16px;
+}
