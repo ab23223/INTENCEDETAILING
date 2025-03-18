@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <style>
-        * {
+                * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -19,10 +19,10 @@
             color: #333;
         }
 
-
-        .navbar img{
+        .navbar img {
             width: 130px;
         }
+
         .navbar {
             background-color: #151515;
             padding: 0px;
@@ -31,17 +31,20 @@
             justify-content: space-between;
             align-items: center;
         }
+
         .navbar h1 {
             font-size: 32px;
             font-weight: bold;
             color: white;
             margin-left: -580px;
         }
+
         .navbar a {
             margin: 0 8px;
             color: white;
             transition: color 0.3s;
         }
+
         .navbar a:hover {
             color: white;
         }
@@ -80,55 +83,68 @@
             margin-left: 50px;
         }
 
-        .imagee img{
-            width: 50%;
-            margin-top: -900px;
-            margin-left: 750px;
+        /* Flexbox container for the image and contact section */
+        .contact-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 40px 20px;
+        }
+
+        .contact-heading {
+            flex: 1;
+            padding-right: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-heading h2 {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+
+        .contact-heading p {
+            font-size: 18px;
+            margin-bottom: 24px;
+        }
+
+        .imagee {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .imagee img {
+            width: 80%;
             border-radius: 20px;
         }
 
+        /* Contact details section below the image */
         .contactdets {
-            margin-left: 750px;
-            max-width: 400px;
+            margin-top: 40px;
+            max-width: 600px;
+            padding: 30px;
+            background-color: transparent;
+            margin: 0 auto;
+            border-radius: 8px;
+        }
+
+        /* Contact form styling */
+        .contactform {
             padding: 30px;
             border-radius: 8px;
             background-color: transparent;
-            margin-top: 0px;
-            margin-bottom: 200px;
-        }
-
-        .contactdets1 {
-            margin-left: 1100px;
-            max-width: 400px;
-            padding: 30px;
-            padding-bottom: 100px;
-            border-radius: 8px;
-            background-color: transparent;
-            margin-top: -605px;
-            margin-bottom: 100px;
-        }
-
-        .contact1, .contactinfo, .contactform {
-            margin: 40px 90px;
+            margin: 40px auto;
             max-width: 650px;
-            padding: 30px;
-            border-radius: 8px;
-            background-color: transparent;
         }
 
-        .contactinfo h2 {
+        .contactinfo h2, .contact1 h1 {
             font-size: 40px;
             margin-bottom: 20px;
             color: #111;
         }
-
-        .contact1 h1{
-            font-size: 50px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            color: #111;
-        }
-
 
         .contactinfo p {
             font-size: 17px;
@@ -181,18 +197,6 @@
             color: #555;
         }
 
-        .contactdets1 h2 {
-            font-size: 28px;
-            margin-bottom: 10px;
-            color: #111;
-        }
-
-        .contactdets1 p {
-            font-size: 16px;
-            margin-bottom: 15px;
-            color: #555;
-        }
-
         footer {
             text-align: center;
             padding: 20px;
@@ -203,8 +207,103 @@
         footer p {
             font-size: 14px;
         }
+
+        /* Responsive CSS for iPhones and smaller devices */
+        @media (max-width: 768px) {
+            .navbar h1 {
+                font-size: 28px;
+                margin-left: 0;
+            }
+
+            .navbar img {
+                width: 100px;
+            }
+
+            .hero h2 {
+                font-size: 48px;
+                margin-left: 20px;
+            }
+
+            .hero p {
+                font-size: 18px;
+                margin-left: 20px;
+            }
+
+            .imagee img {
+                width: 80%;
+                margin-top: 0px;
+                margin-left: 10px;
+            }
+
+            .contactdets, .contactdets1, .contact1, .contactinfo, .contactform {
+                margin: 20px;
+                max-width: 100%;
+                padding: 20px;
+            }
+
+            .contactinfo h2, .contact1 h1 {
+                font-size: 32px;
+            }
+
+            .contactinfo p, .contactdets p {
+                font-size: 14px;
+            }
+
+            .contactform input, .contactform textarea {
+                font-size: 14px;
+            }
+
+            .contactform button {
+                font-size: 14px;
+            }
+
+            footer p {
+                font-size: 12px;
+            }
+
+            .hero-content {
+                flex-direction: column;
+            }
+
+            .contactdets, .contactdets1 {
+                width: 90%;
+            }
+        }
+
+        /* For smaller devices (iPhone SE size and smaller) */
+        @media (max-width: 480px) {
+            .hero h2 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .imagee img {
+                width: 90%;
+                margin-top: -400px;
+                margin-left: 5px;
+            }
+
+            .contactdets, .contactdets1, .contact1, .contactinfo, .contactform {
+                padding: 15px;
+            }
+
+            .contactinfo h2, .contact1 h1 {
+                font-size: 28px;
+            }
+
+            .contactform input, .contactform textarea {
+                font-size: 12px;
+            }
+
+            .contactform button {
+                font-size: 12px;
+            }
+        }
     </style>
-</head>
+    </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar">
@@ -227,11 +326,17 @@
         <h2>Contact Us</h2>
         <p>Please contact us for a free quote</p>
     </section>
-
-    <section class="contactinfo">
-        <h2>Contact Us</h2>
-        <p>Would you like to receive a free quote or do you have a question regarding our products or services? Feel free to visit us or contact us via the contact form below.</p>
-        <p>An exact price determination for used cars is possible after inspection at our location. In this way we can propose you the most suitable treatment, tailored to your wishes and expectations.</p>
+    
+    <section class="contact-section">
+        <div class="contact-heading">
+            <h2>Contact Us</h2>
+            <p>Would you like to receive a free quote or do you have a question regarding our products or services? Feel free to visit us or contact us via the contact form below.</p>
+            <p>An exact price determination for used cars is possible after inspection at our location. In this way we can propose you the most suitable treatment, tailored to your wishes and expectations.</p>
+        </div>
+    
+        <div class="imagee">
+            <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FyJTIwd2FzaHxlbnwwfHwwfHx8MA%3D%3D">
+        </div>
     </section>
 
     <section class="contactform">
@@ -257,18 +362,30 @@
         Thank you for your email! We will get back to you shortly.
     </div>
 
-    
-    <section class="imagee">
-        <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FyJTIwd2FzaHxlbnwwfHwwfHx8MA%3D%3D">
-    </section>
-
     <section class="contactdets">
+        <div class="contactform">
+            <form id="contact-form" action="https://formspree.io/f/xnnpawrn" method="POST" onsubmit="submitForm(event)">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="car">Car ( Make, Model, Year of Manufacture)</label>
+                <input type="text" id="car" name="car">
+                
+                <label for="message">Message</label>
+                <textarea id="message" name="message"></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
         <div class="contact-details">
             <h2>Address</h2>
             <p>INTENCE DETAILING<br>
                 Auckland, NZ<br> 
             </p>
-            
+    
             <h2>Hours</h2>
             <p>Monday: By Appointment<br>
                 Tuesday: By Appointment<br>
@@ -279,10 +396,8 @@
                 Sunday: 9AM - 6PM
             </p>
         </div>
-    </section>
 
-    <section class="contactdets1">
-        <div class="contact-details1">
+        <div class="contact-details">
             <h2>Phone Number</h2>
             <p>+64 204 511 510</p>
             

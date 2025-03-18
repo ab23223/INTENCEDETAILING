@@ -539,6 +539,66 @@
         .service-item p {
             color: #9CA3AF;
         }
+
+        /* RESPONSIVE STYLES FOR IPHONES */
+        @media screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 10px;
+                align-items: center;
+                text-align: center;
+            }
+            .navbar h1 {
+                font-size: 24px;
+                margin-left: 0;
+            }
+            .navbar a {
+                display: block;
+                margin: 5px 0;
+            }
+            .hero {
+                padding: 150px 20px;
+                text-align: center;
+            }
+            .hero h2 {
+                font-size: 32px;
+                margin-left: 0;
+            }
+            .hero p {
+                font-size: 18px;
+                margin-left: 0;
+            }
+            .gallery h3, .testimonials h3, .contact h3 {
+                font-size: 28px;
+            }
+            .testimonial-item {
+                width: 90%;
+                margin: 0 auto;
+            }
+            .contact-form {
+                max-width: 100%;
+                margin-left: 0;
+                padding: 20px;
+            }
+            .info-text h2 {
+                font-size: 28px;
+                margin: 0 20px;
+                text-align: center;
+            }
+            .info-text p {
+                font-size: 16px;
+                text-align: center;
+            }
+            .info-image img {
+                max-width: 90%;
+            }
+            .services {
+                flex-direction: column;
+                align-items: center;
+            }
+            .service {
+                max-width: 90%;
+            }
     </style>
     <!-- Navbar -->
     <nav class="navbar">

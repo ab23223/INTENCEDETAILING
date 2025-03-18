@@ -266,6 +266,71 @@
             height: 500px;
             border-radius: 15px;
         }
+
+        /* Responsive CSS for iPhones */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+                padding: 10px 0;
+            }
+
+            .navbar h1 {
+                font-size: 24px;
+                margin-left: 0;
+                text-align: center;
+            }
+
+            .navbar img {
+                width: 100px;
+            }
+
+            .hero {
+                padding: 150px 20px;
+                text-align: center;
+            }
+
+            .hero h2 {
+                font-size: 40px;
+                margin-left: 0;
+            }
+
+            .hero p, .hero a {
+                margin-left: 0;
+            }
+
+            .service-details {
+                padding: 40px 20px;
+            }
+
+            .pricing-table {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .pricing-card {
+                width: 100%;
+            }
+
+            .contact-form {
+                margin-left: 0;
+                padding: 20px;
+            }
+
+            #info-section {
+                flex-direction: column-reverse;
+                padding: 40px 20px;
+            }
+
+            .info-text, .info-image {
+                width: 100%;
+            }
+
+            .info-image {
+                height: 300px;
+            }
+        }
+
     </style>
 </head>
 
