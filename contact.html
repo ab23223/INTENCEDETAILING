@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <style>
-        
         * {
             margin: 0;
             padding: 0;
@@ -18,22 +17,19 @@
         body {
             background-color: #f7f7f7;
             color: #333;
-            font-family: Arial, sans-serif;
-        }
-
-        /* Navbar Styles */
-        .navbar {
-            background-color: #151515;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            box-sizing: border-box;
         }
 
         .navbar img {
             width: 130px;
+        }
+
+        .navbar {
+            background-color: #151515;
+            padding: 0px;
+            padding-right: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .navbar h1 {
@@ -53,10 +49,10 @@
             color: white;
         }
 
-        /* Hero Section Styles */
+        /* Hero Section */
         .hero {
             background-image: url("https://images.unsplash.com/photo-1607860108855-64acf2078ed9?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FyJTIwd2FzaHxlbnwwfHwwfHx8MA%3D%3D");
-            padding: 50px 20px;
+            padding: 50px 0;
             text-align: left;
             margin-top: -1px;
             width: 100%;
@@ -90,17 +86,16 @@
         /* Contact Section - Grid Layout */
         .contact-section {
             display: grid;
-            grid-template-columns: 1fr 1fr;  /* Two columns */
-            grid-template-rows: auto auto auto;  /* Three rows */
+            grid-template-columns: 1fr 1fr; /* Two columns */
+            grid-template-rows: auto auto; /* Two rows */
             grid-gap: 20px;
             padding: 40px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
         }
 
+        /* Contact Heading - Top left */
         .contact-heading {
-            grid-column: 1 / 2;  /* Place in the first column */
-            grid-row: 1 / 2;
+            grid-column: 1 / 2; /* First column */
+            grid-row: 1 / 2; /* First row */
             padding-right: 20px;
             display: flex;
             flex-direction: column;
@@ -109,55 +104,57 @@
 
         .contact-heading h2 {
             margin-left: 30px;
-            font-size: 48px;
+            font-size: 48px; /* Larger font size for the heading */
             font-weight: lighter;
             margin-bottom: 16px;
-            color: #111;
+            color: #111; /* Ensure it is dark for readability */
         }
 
         .contact-heading p {
             margin-left: 30px;
-            font-size: 18px;
+            font-size: 18px; /* Larger text for the paragraph */
             color: #555;
         }
 
+        /* Image - Top right */
         .imagee {
-            grid-column: 2 / 3;  /* Place in the second column */
-            grid-row: 1 / 2;
+            grid-column: 2 / 3; /* Second column */
+            grid-row: 1 / 2; /* First row */
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 0;  /* Remove any top margin */
         }
-
+        /* Optional: Adjust the image width to balance the layout */
         .imagee img {
-            width: 100%;
-            max-width: 500px;  /* Limit image size */
+            width: 90%; /* Allow image to take full width of its container */
             border-radius: 20px;
         }
-
+        /* Contact Form - Adjust width */
         .contactform {
-            grid-column: 1 / 3;  /* Span across both columns on smaller screens */
-            grid-row: 2 / 3;
+            grid-column: 1 / 3; /* Span across both columns */
+            grid-row: 2 / 3; /* Second row */
             padding: 30px;
             border-radius: 8px;
             background-color: transparent;
             margin: 40px auto;
-            width: 80%;
-            max-width: 800px;
+            max-width: 100%; /* Remove the max-width for more flexibility */
+            width: 50%; /* Ensure it takes full width available */
+            margin-left: 0%; /* Move it slightly to the left */
+            
         }
 
+        /* Contact Details - Bottom right */
         .contactdets {
-            grid-column: 1 / 3;  /* Span across both columns on smaller screens */
-            grid-row: 3 / 4;
+            grid-column: 2 / 3; /* Second column */
+            grid-row: 2 / 3; /* Second row */
             padding: 30px;
             background-color: transparent;
-            margin-top: 20px;
+            margin-top: -20px;
             border-radius: 8px;
         }
 
-        .contactinfo h2,
-        .contact1 h1 {
+
+        .contactinfo h2, .contact1 h1 {
             font-size: 40px;
             margin-bottom: 20px;
             color: #111;
@@ -176,8 +173,7 @@
             display: block;
         }
 
-        .contactform input,
-        .contactform textarea {
+        .contactform input, .contactform textarea {
             width: 100%;
             padding: 12px;
             margin-bottom: 15px;
@@ -226,69 +222,69 @@
             font-size: 14px;
         }
 
-        /* Media Queries for Responsive Design */
+        /* Responsive CSS for iPhones and smaller devices */
         @media (max-width: 768px) {
-            .contact-section {
-                grid-template-columns: 1fr;  /* Stack into 1 column */
-                grid-template-rows: auto auto auto auto;  /* Three rows instead of two */
+            .navbar h1 {
+                font-size: 28px;
+                margin-left: 0;
             }
 
-            .contactform {
-                width: 90%;  /* Full width on mobile */
-                margin-left: 5%;
+            .navbar img {
+                width: 100px;
             }
 
-            .contactdets {
-                width: 90%;  /* Full width on mobile */
-                margin-left: 5%;
-                margin-top: 20px;
+            .hero h2 {
+                font-size: 48px;
+                margin-left: 20px;
             }
 
-            .contact-heading h2 {
-                font-size: 32px;
-            }
-
-            .contact-heading p {
-                font-size: 14px;
-            }
-
-            .imagee {
-                grid-column: 1 / 2;  /* Move image below text */
-                grid-row: 2 / 3;
-                margin-top: 20px;
+            .hero p {
+                font-size: 18px;
+                margin-left: 20px;
             }
 
             .imagee img {
-                width: 100%;
+                width: 80%;
+                margin-top: 0px;
+                margin-left: 10px;
+            }
+
+            .contactdets, .contactdets1, .contact1, .contactinfo, .contactform {
+                margin: 20px;
                 max-width: 100%;
-                margin-top: -300px;
-                padding-top: -100px;
+                padding: 20px;
             }
 
-            .contactinfo h2,
-            .contact1 h1 {
-                font-size: 28px;
+            .contactinfo h2, .contact1 h1 {
+                font-size: 32px;
             }
 
-            .contactinfo p,
-            .contactdets p {
+            .contactinfo p, .contactdets p {
                 font-size: 14px;
             }
 
-            .contactform input,
-            .contactform textarea {
+            .contactform input, .contactform textarea {
                 font-size: 14px;
             }
 
-            .contactform{
-                margin-top: 500px;
-                padding-top: -300px;
-            }
             .contactform button {
                 font-size: 14px;
             }
+
+            footer p {
+                font-size: 12px;
+            }
+
+            .hero-content {
+                flex-direction: column;
+            }
+
+            .contactdets, .contactdets1 {
+                width: 90%;
+            }
         }
 
+        /* For smaller devices (iPhone SE size and smaller) */
         @media (max-width: 480px) {
             .hero h2 {
                 font-size: 36px;
@@ -298,13 +294,30 @@
                 font-size: 16px;
             }
 
+            .imagee img {
+                width: 90%;
+                margin-top: -400px;
+                margin-left: 5px;
+            }
+
+            .contactdets, .contactdets1, .contact1, .contactinfo, .contactform {
+                padding: 15px;
+            }
+
+            .contactinfo h2, .contact1 h1 {
+                font-size: 28px;
+            }
+
+            .contactform input, .contactform textarea {
+                font-size: 12px;
+            }
+
             .contactform button {
                 font-size: 12px;
             }
         }
-
     </style>
-    </head>
+</head>
 <body>
     <!-- Navbar -->
     <nav class="navbar">
