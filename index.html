@@ -251,38 +251,38 @@
             justify-content: center;
             padding: 50px;
             background-color: #fff;
+            flex-wrap: wrap; /* Allows proper wrapping on smaller screens */
         }
+
         .info-text {
             flex: 1;
             padding: 20px;
             text-align: left;
         }
+
         .info-text h2 {
             font-size: 45px;
-            margin-bottom: 40px;
-            margin-top: -270px;
-            margin-left: 50px;
-            margin-right: 300px;
-            color: black;
-            font-weight: 600;
+            margin: 0 50px;
+            text-align: left;
         }
         .info-text p {
             font-size: 18px;
-            line-height: 1.6;
+            margin: 0 50px;
             color: #555;
-            margin-left: 50px;
-            margin-right: -100px;
+            text-align: left;
         }
-
+        
         .info-image {
             flex: 1;
             text-align: center;
         }
         .info-image img {
-            max-width: 70%;
-            max-height: 600px;
-            border-radius: 10px;
+            max-width: 100%;
+            height: auto;
+            padding-top: 0;
+            margin-left: 0;
         }
+
 
         .navbar img{
             width: 130px;
@@ -580,20 +580,19 @@
                 margin-left: 0;
                 padding: 20px;
             }
-            .info-text h2 {
-                font-size: 28px;
+            #info-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .info-text h2, .info-text p {
                 margin: 0 20px;
                 text-align: center;
             }
-            .info-text p {
-                font-size: 16px;
-                margin-left: 0%;
-                text-align: center;
-            }
             .info-image img {
-                max-width: 400%;
-                padding-top: 500px;
-                margin-left: -100px;
+                max-width: 90%;
+                height: auto;
+                padding-top: 20px;
+                margin-left: 0;
             }
             .services {
                 flex-direction: column;
@@ -603,10 +602,8 @@
                 max-width: 90%;
             }
         }
-        </style>
-    
-
-    <nav class="navbar">
+    </style>
+        <nav class="navbar">
         <a href="https://ab23223.github.io/INTENCEDETAILING/" target="_self">
             <img src="https://res.cloudinary.com/dfqreujbo/image/upload/v1741639612/INTEC_MEDIA11_m0tgqr.png" />
         </a>
