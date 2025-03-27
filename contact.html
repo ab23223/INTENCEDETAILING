@@ -462,6 +462,8 @@
     </footer>
 
     <script>
+        document.querySelectorAll("img").forEach(img => img.setAttribute("loading", "lazy"));
+        
         function submitForm(event) {
             event.preventDefault(); // Prevent the default form submission
     
