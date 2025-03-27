@@ -465,12 +465,13 @@ body {
 }
 
 .service img {
-    width: 100%;
-    height: auto;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
     display: block;
-    border-radius: 10px; /* Optional for better aesthetics */
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
 }
-
 .overlay {
     position: absolute;
     bottom: 0;

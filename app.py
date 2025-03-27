@@ -48,5 +48,5 @@ def aboutus():
 def google37826803ac2e632c():
     return template('google37826803ac2e632c.html')  # Make sure you have an 'index.tpl' template in the 'views/' folder
 
-# Run the app
-run(reloader=True)
+if __name__ == "__main__":
+    run(reloader=True)
