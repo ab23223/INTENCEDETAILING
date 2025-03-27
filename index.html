@@ -868,6 +868,7 @@
     </footer>
 
     <script>
+            document.querySelectorAll("img").forEach(img => img.setAttribute("loading", "lazy"));
             // Open the modal when the "Add a Review" button is clicked
             document.getElementById('openReviewForm').addEventListener('click', function() {
                 document.getElementById('reviewModal').classList.remove('hidden');
