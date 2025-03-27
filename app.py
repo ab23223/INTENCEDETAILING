@@ -42,5 +42,11 @@ def contact():
 def aboutus():
     return template('about-us.html')  # Make sure you have an 'index.tpl' template in the 'views/' folder
 
+
+# Route for google verification (shows albums or general content) 
+@route('/google37826803ac2e632c.html')
+def google37826803ac2e632c():
+    return template('google37826803ac2e632c.html')  # Make sure you have an 'index.tpl' template in the 'views/' folder
+
 # Run the app
 run(reloader=True)
