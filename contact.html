@@ -7,172 +7,162 @@
     <link rel="stylesheet" href="">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="icon" href="https://res.cloudinary.com/dfqreujbo/image/upload/v1743371665/Intence_Detailing_sabanc.png">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+    
         body {
             background-color: #f7f7f7;
             color: #333;
+            font-family: Arial, sans-serif;
         }
-
-        .navbar img {
-            width: 130px;
-        }
-
+    
         .navbar {
             background-color: #151515;
-            padding: 0px;
-            padding-right: 20px;
+            padding: 10px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
+    
+        .navbar img {
+            width: 130px;
+        }
+    
         .navbar h1 {
             font-size: 32px;
             font-weight: bold;
             color: white;
-            margin-left: -580px;
+            margin-left: 0;
         }
-
+    
         .navbar a {
             margin: 0 8px;
             color: white;
+            text-decoration: none;
             transition: color 0.3s;
         }
-
+    
         .navbar a:hover {
-            color: white;
+            color: #aaa;
         }
-
+    
         /* Hero Section */
         .hero {
             background-image: url("https://images.unsplash.com/photo-1607860108855-64acf2078ed9?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FyJTIwd2FzaHxlbnwwfHwwfHx8MA%3D%3D");
-            padding: 50px 0;
+            padding: 60px 20px;
             text-align: left;
-            margin-top: -1px;
-            width: 100%;
-            height: auto;
+            background-size: cover;
+            background-position: center;
+            color: white;
         }
-
+    
         .hero h2 {
             font-size: 66px;
             font-weight: bold;
             margin-bottom: 16px;
-            margin-left: 90px;
-            color: white;
         }
-
+    
         .hero p {
             margin-bottom: 24px;
-            color: white;
-            margin-left: 90px;
             font-size: 20px;
         }
-
+    
         .hero a {
             background-color: white;
             color: black;
-            padding: 8px 24px;
+            padding: 10px 24px;
             border-radius: 9999px;
             font-weight: 600;
-            margin-left: 50px;
+            text-decoration: none;
         }
-
-        /* Contact Section - Grid Layout */
+    
+        /* Contact Section - Fixed Grid */
         .contact-section {
             display: grid;
-            grid-template-columns: 1fr 1fr; /* Two columns */
-            grid-template-rows: auto auto; /* Two rows */
-            grid-gap: 20px;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 40px;
             padding: 40px 20px;
+            align-items: start;
         }
-
-        /* Contact Heading - Top left */
+    
         .contact-heading {
-            grid-column: 1 / 2; /* First column */
-            grid-row: 1 / 2; /* First row */
-            padding-right: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            grid-column: 1 / 2;
         }
-
+    
         .contact-heading h2 {
-            margin-left: 30px;
-            font-size: 48px; /* Larger font size for the heading */
-            font-weight: lighter;
+            font-size: 48px;
             margin-bottom: 16px;
-            color: #111; /* Ensure it is dark for readability */
+            color: #111;
         }
-
+    
         .contact-heading p {
-            margin-left: 30px;
-            font-size: 18px; /* Larger text for the paragraph */
+            font-size: 18px;
             color: #555;
+            line-height: 1.6;
         }
-
-        /* Image - Top right */
+    
+        /* Image - Right Side */
         .imagee {
-            grid-column: 2 / 3; /* Second column */
-            grid-row: 1 / 2; /* First row */
+            grid-column: 2 / 3;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        /* Optional: Adjust the image width to balance the layout */
+    
         .imagee img {
-            width: 90%; /* Allow image to take full width of its container */
+            width: 100%;
+            max-width: 500px;
             border-radius: 20px;
         }
-        /* Contact Form - Adjust width */
-        .contactform {
-            grid-column: 1 / 3; /* Span across both columns */
-            grid-row: 2 / 3; /* Second row */
-            padding: 30px;
-            border-radius: 8px;
-            background-color: transparent;
-            margin: 40px auto;
-            max-width: 100%; /* Remove the max-width for more flexibility */
-            width: 50%; /* Ensure it takes full width available */
-            margin-left: 0%; /* Move it slightly to the left */
-            
+    
+        /* Contact Details and Form - Stacked */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 30px;
+            margin-top: 40px;
         }
-
-        /* Contact Details - Bottom right */
+    
+        /* Contact Details */
         .contactdets {
-            grid-column: 2 / 3; /* Second column */
-            grid-row: 2 / 3; /* Second row */
+            background-color: #fff;
             padding: 30px;
-            background-color: transparent;
-            margin-top: -20px;
             border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-
-
-        .contactinfo h2, .contact1 h1 {
-            font-size: 40px;
-            margin-bottom: 20px;
+    
+        .contactdets h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
             color: #111;
         }
-
-        .contactinfo p {
-            font-size: 17px;
-            line-height: 1.6;
+    
+        .contactdets p {
+            font-size: 16px;
+            margin-bottom: 8px;
             color: #555;
         }
-
+    
+        /* Contact Form */
+        .contactform {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+    
         .contactform label {
             font-size: 14px;
-            color: #555;
             margin-bottom: 8px;
             display: block;
+            color: #555;
         }
-
+    
         .contactform input, .contactform textarea {
             width: 100%;
             padding: 12px;
@@ -180,10 +170,13 @@
             border: 1px solid #ccc;
             border-radius: 6px;
             background-color: #f7f7f7;
-            color: #333;
             font-size: 16px;
         }
-
+    
+        .contactform textarea {
+            height: 120px;
+        }
+    
         .contactform button {
             background-color: #111;
             color: #fff;
@@ -192,132 +185,117 @@
             border-radius: 6px;
             font-size: 16px;
             cursor: pointer;
-            transition: background-color 0.3s;
         }
-
+    
         .contactform button:hover {
             background-color: #444;
         }
-
-        .contactdets h2 {
-            font-size: 28px;
-            margin-bottom: 10px;
-            color: #111;
-        }
-
-        .contactdets p {
-            font-size: 16px;
-            margin-bottom: 15px;
-            color: #555;
-        }
-
+    
         footer {
             text-align: center;
             padding: 20px;
             background-color: #111;
             color: #fff;
         }
-
+    
         footer p {
             font-size: 14px;
         }
-
-        /* Responsive CSS for iPhones and smaller devices */
+    
+        /* ✅ Responsive for iPhones & Mobile */
         @media (max-width: 768px) {
-            .navbar h1 {
-                font-size: 28px;
-                margin-left: 0;
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
             }
-
+    
             .navbar img {
                 width: 100px;
             }
-
+    
+            .navbar h1 {
+                font-size: 28px;
+            }
+    
             .hero h2 {
                 font-size: 48px;
-                margin-left: 20px;
             }
-
+    
             .hero p {
                 font-size: 18px;
-                margin-left: 20px;
             }
-
+    
+            .contact-section {
+                grid-template-columns: 1fr;
+                grid-gap: 20px;
+            }
+    
+            .contact-grid {
+                grid-template-columns: 1fr;
+                grid-gap: 20px;
+            }
+    
+            .imagee {
+                grid-column: 1 / 2;
+                margin-top: 20px;
+            }
+    
             .imagee img {
-                width: 80%;
-                margin-top: 0px;
-                margin-left: 10px;
+                width: 100%;
             }
-
-            .contactdets, .contactdets1, .contact1, .contactinfo, .contactform {
-                margin: 20px;
-                max-width: 100%;
+    
+            .contactform,
+            .contactdets {
+                width: 100%;
                 padding: 20px;
             }
-
-            .contactinfo h2, .contact1 h1 {
-                font-size: 32px;
-            }
-
-            .contactinfo p, .contactdets p {
-                font-size: 14px;
-            }
-
-            .contactform input, .contactform textarea {
-                font-size: 14px;
-            }
-
-            .contactform button {
-                font-size: 14px;
-            }
-
-            footer p {
-                font-size: 12px;
-            }
-
-            .hero-content {
-                flex-direction: column;
-            }
-
-            .contactdets, .contactdets1 {
-                width: 90%;
-            }
         }
-
-        /* For smaller devices (iPhone SE size and smaller) */
+    
+        /* ✅ Perfect for iPhone SE and Smaller Devices */
         @media (max-width: 480px) {
+            .navbar {
+                padding: 10px;
+            }
+    
+            .navbar img {
+                width: 80px;
+            }
+    
             .hero h2 {
                 font-size: 36px;
             }
-
+    
             .hero p {
                 font-size: 16px;
             }
-
-            .imagee img {
-                width: 90%;
-                margin-top: -400px;
-                margin-left: 5px;
+    
+            .contact-heading h2 {
+                font-size: 32px;
             }
-
-            .contactdets, .contactdets1, .contact1, .contactinfo, .contactform {
+    
+            .contact-heading p {
+                font-size: 16px;
+            }
+    
+            .contactform,
+            .contactdets {
                 padding: 15px;
             }
-
-            .contactinfo h2, .contact1 h1 {
-                font-size: 28px;
-            }
-
+    
             .contactform input, .contactform textarea {
-                font-size: 12px;
+                font-size: 14px;
             }
-
+    
             .contactform button {
+                font-size: 14px;
+            }
+    
+            footer p {
                 font-size: 12px;
             }
         }
     </style>
-</head>
+    </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar">
