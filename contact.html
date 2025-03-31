@@ -24,32 +24,29 @@
     
         .navbar {
             background-color: #151515;
-            padding: 10px 20px;
+            padding: 1px;
+            padding-right: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-    
-        .navbar img {
-            width: 130px;
-        }
-    
         .navbar h1 {
             font-size: 32px;
             font-weight: bold;
             color: white;
-            margin-left: 0;
+            margin-left: -580px;
         }
-    
         .navbar a {
             margin: 0 8px;
             color: white;
-            text-decoration: none;
             transition: color 0.3s;
         }
-    
         .navbar a:hover {
-            color: #aaa;
+            color: white;
+        }
+
+        .navbar img{
+            width: 130px;
         }
     
         /* Hero Section */
@@ -173,6 +170,40 @@
             background-color: #f7f7f7;
             font-size: 16px;
         }
+
+        /* Style the select dropdown */
+        select {
+            width: 100%; /* Full width to fit the form */
+            padding: 12px 15px; /* Add padding for better spacing inside */
+            font-size: 16px; /* Increase font size for readability */
+            font-weight: 400; /* Set a normal weight for text */
+            background-color: #f4f4f4; /* Light gray background */
+            border: 1px solid #ccc; /* Gray border */
+            border-radius: 8px; /* Rounded corners */
+            outline: none; /* Remove the default focus outline */
+            transition: all 0.3s ease; /* Smooth transition on hover/focus */
+        }
+
+        /* Style for the select dropdown on focus */
+        select:focus {
+            border-color: #4CAF50; /* Green border when focused */
+            background-color: #e8f5e8; /* Light green background on focus */
+            box-shadow: 0 0 10px rgba(76, 175, 80, 0.5); /* Green glow effect */
+        }
+
+        /* Style the dropdown options */
+        select option {
+            padding: 10px; /* Padding inside the options */
+            background-color: white; /* White background for options */
+            color: #333; /* Dark text color for readability */
+            border-radius: 8px; /* Rounded edges for options */
+        }
+
+        /* Optional: Styling for hover effect on options */
+        select option:hover {
+            background-color: #f1f1f1; /* Light gray on hover */
+        }
+
     
         .contactform textarea {
             height: 120px;
@@ -327,7 +358,7 @@
         </div>
     
         <div class="imagee">
-            <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FyJTIwd2FzaHxlbnwwfHwwfHx8MA%3D%3D" alt="stock porches image">
+            <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FyJTIwd2FzaHxlbnwwfHwwfHx8MA%3D%3D" alt="stock porches image" loading="lazy">
         </div>
     
         <div class="contactform">
@@ -337,6 +368,16 @@
                 
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
+
+                <!-- Dropdown for enquiry type -->
+                <label for="enquiry-type">What are you enquiring about?</label>
+                <select id="enquiry-type" name="enquiry-type" required>
+                    <option value="interior-cleaning">Interior Cleaning</option>
+                    <option value="pricing">Pricing</option>
+                    <option value="exterior-cleaning">Exterior Cleaning</option>
+                    <option value="engine-bay-cleaning">Engine Bay Cleaning</option>
+                    <option value="other">Other</option>
+                </select>
                 
                 <label for="car">Car ( Make, Model, Year of Manufacture)</label>
                 <input type="text" id="car" name="car" placeholder="Optional">
@@ -472,6 +513,10 @@
     
             // Reset the form to clear all input fields
             form.reset();
+
+            function resetForm() {
+                document.getElementById('enquiry-type').selectedIndex = 0;  // Reset dropdown to the first option
+            }
         }
     </script>
 </body>
