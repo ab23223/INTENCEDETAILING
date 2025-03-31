@@ -151,7 +151,7 @@
             line-height: 2rem; 
             font-weight: 600;
             padding: 1rem; 
-            width: 100%; 
+            width: 100%;
 
 
             @media (min-width: 768px) { 
@@ -187,19 +187,26 @@
             margin: auto;
         }
 
-        .ourservices .container .products{
+        .whychooseus .container .products,
+        .ourservices .container .products {
             font-size: 1.5rem;
             line-height: 2rem; 
             font-weight: 600;
-            padding: 1rem; 
-            width: 100%; 
-
-
-            @media (min-width: 768px) { 
-            width: 33.333333%; 
-            } 
+            padding: 1.5rem; /* Increase padding for spacing inside */
+            width: 100%;
+            background-color: #f0f0f0; /* Light gray background */
+            border-radius: 15px; /* Rounded corners */
+            text-align: center;
+            margin: 10px; /* Space between each product */
         }
 
+        /* Ensure proper layout on larger screens */
+        @media (min-width: 768px) { 
+            .whychooseus .container .products,
+            .ourservices .container .products {
+                width: 30%; /* Adjust width to fit 3 per row */
+            }
+        }
         .ourservices .container .prempro{
             color: #4B5563; 
             font-size: 16px;
@@ -317,7 +324,7 @@
     <header class="hero">
         <h2>About INTENCE DETAILING</h2>
         <p>From Basic Interior Cleans to Luxury, Fully Comprehensive Packages – We Do It All..</p>
-        <a href="#contact">Book Now</a>
+        <a href="/INTENCEDETAILING/contact">Book Now</a>
     </header>
 
     <section id="info-section">
