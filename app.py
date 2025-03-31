@@ -48,6 +48,11 @@ def google37826803ac2e632c():
 def robots():
     return template('robots.txt')  # Make sure you have an 'index.tpl' template in the 'views/' folder
 
+# Route for google verification (shows albums or general content) 
+@route('/sitemap.xml')
+def sitemap():
+    return template('sitemap.xml')  # Make sure you have an 'index.tpl' template in the 'views/' folder
+
 
 if __name__ == "__main__":
     run(reloader=True)
